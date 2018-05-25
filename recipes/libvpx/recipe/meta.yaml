@@ -1,0 +1,37 @@
+{% set version = "20131218" %}
+
+package:
+  name: libvpx
+  version: "20131218"
+
+source:
+  git_url: https://chromium.googlesource.com/webm/libvpx.git
+  git_rev: 7d0ff22e8c96de126be9d3de4952edd6d1b75a8c
+
+build:
+  number: 0
+  skip: true         # [win]
+
+requirements:
+  build:
+    - toolchain3-rpi3
+    - perl
+    - yasm
+
+# test:
+#   commands:
+#     - test -f ${PREFIX}/include/x264.h         # [unix]
+#     - test -f ${PREFIX}/lib/libx264.a          # [unix]
+#     - test -f ${PREFIX}/lib/libx264.dylib      # [osx]
+#     - test -f ${PREFIX}/lib/libx264.so         # [linux]
+#     - x264 --help                              # [unix]
+
+about:
+  home: http://www.videolan.org/developers/x264.html
+  license: GPL 2
+  license_file: COPYING
+  summary: A free software library for encoding video streams into the H.264/MPEG-4 AVC format.
+
+extra:
+  recipe-maintainers:
+    - gaiar

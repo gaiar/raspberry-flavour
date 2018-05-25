@@ -1,0 +1,24 @@
+{% set version = "1.2.1" %}
+
+package:
+  name: opus
+  version: "1.2.1"
+
+source:
+  fn: opus-{{ version }}.tar.gz
+  url: https://archive.mozilla.org/pub/opus/opus-{{ version }}.tar.gz
+  #md5: f8a490637d8fbdef8200870c3e7f711d
+
+build:
+  number: 0
+  skip: true         # [win]
+
+requirements:
+  build:
+    - toolchain3-rpi3
+    - perl
+    - yasm
+
+extra:
+  recipe-maintainers:
+    - gaiar

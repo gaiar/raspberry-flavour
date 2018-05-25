@@ -1,0 +1,22 @@
+{% set version = "2.7" %}
+
+package:
+  name: x265
+  version: "2.7"
+
+source:
+  git_url: https://github.com/videolan/x265.git
+  git_rev: 56b216f063b38bb10b61ae8452a452dd8534659e
+
+build:
+  number: 0
+  skip: true         # [win]
+
+requirements:
+  build:
+    - toolchain3-rpi3
+    - nasm
+
+extra:
+  recipe-maintainers:
+    - gaiar

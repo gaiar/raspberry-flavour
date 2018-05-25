@@ -1,0 +1,61 @@
+# This file created by conda-build 3.0.9
+# meta.yaml template originally from:
+# /scratch/soumith/builder/conda/torchvision-0.1.9, last modified Sat Aug  5 23:53:27 2017
+# ------------------------------------------------
+
+package:
+    name: torchvision
+    version: 0.2.1
+source:
+    git_url: https://github.com/pytorch/vision.git
+    git_rev: "1d0a3b11c6406e8b604c2c95b228bc6f7bc36ac4"
+build:
+    number: '1'
+    script: python setup.py install
+    string: py36h7584368_1
+requirements:
+    build:
+        - cffi 
+        - freetype 
+        - jbig 
+        - libjpeg-turbo 
+        - libffi 
+        - libpng 
+        - libtiff 
+        - numpy 
+        - olefile 
+        - openssl 
+        - pillow >=4.1.* 
+        - pip 
+        - pycparser 
+        - python 
+        - pytorch-cpu 
+        - pyyaml 
+        - readline 
+        - setuptools 
+        - six 
+        - sqlite 
+        - tk 
+        - wheel 
+        - xz 
+        - yaml 
+        - zlib 
+    run:
+        - numpy
+        - pillow
+        - python >=3.6,<3.7.0a0
+        - pytorch-cpu >=0.2
+        - six
+test:
+    imports:
+        - torchvision
+        - torchvision.datasets
+        - torchvision.transforms
+about:
+    home: https://github.com/pytorch/vision
+    license: BSD
+    license_file: LICENSE
+extra:
+    copy_test_source_files: true
+    final: true
+

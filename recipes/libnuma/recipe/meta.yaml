@@ -1,0 +1,23 @@
+{% set version = "2.0.11" %}
+
+build:
+    number: 0
+
+package:
+    name: libnuma 
+    version: 2.0.11
+
+source:
+    git_url: https://github.com/numactl/numactl.git
+    git_rev: f1849d0d7a50a6b9d507b7cc6164b04aae948d54
+
+requirements:
+  build:
+    - toolchain3-rpi3
+    - nasm
+
+extra:
+  recipe-maintainers:
+    - gaiar
+
+

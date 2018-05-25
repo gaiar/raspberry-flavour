@@ -1,0 +1,37 @@
+{% set version = "3.100" %}
+
+package:
+  name: libmp3lame
+  version: "3.100"
+
+source:
+  fn: lame-{{ version }}.tar.gz
+  url: https://downloads.sourceforge.net/project/lame/lame/{{ version }}/lame-{{ version }}.tar.gz
+  #md5: f8a490637d8fbdef8200870c3e7f711d
+
+build:
+  number: 0
+  skip: true         # [win]
+
+requirements:
+  build:
+    - toolchain3-rpi3
+    - nasm
+
+# test:
+#   commands:
+#     - test -f ${PREFIX}/include/x264.h         # [unix]
+#     - test -f ${PREFIX}/lib/libx264.a          # [unix]
+#     - test -f ${PREFIX}/lib/libx264.dylib      # [osx]
+#     - test -f ${PREFIX}/lib/libx264.so         # [linux]
+#     - x264 --help                              # [unix]
+
+about:
+  home: http://www.videolan.org/developers/x264.html
+  license: GPL 2
+  license_file: COPYING
+  summary: A free software library for encoding video streams into the H.264/MPEG-4 AVC format.
+
+extra:
+  recipe-maintainers:
+    - gaiar

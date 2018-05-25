@@ -1,0 +1,22 @@
+{% set version = "0.16" %}
+
+package:
+  name: fdk-aac
+  version: "0.16"
+
+source:
+  git_url: https://github.com/mstorsjo/fdk-aac
+  git_rev: a50eecf65b5ce5d4f03768c5c2cb4b492d2badad
+
+build:
+  number: 0
+  skip: true         # [win]
+
+requirements:
+  build:
+    - toolchain3-rpi3
+    - yasm
+
+extra:
+  recipe-maintainers:
+    - gaiar
