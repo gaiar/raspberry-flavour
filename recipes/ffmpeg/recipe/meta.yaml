@@ -1,0 +1,83 @@
+{% set version = "4.0" %}
+
+package:
+  name: ffmpeg
+  version: {{ version }}
+
+source:
+  fn: ffmpeg-{{ version }}.tar.gz  # [not win]
+  url: https://ffmpeg.org/releases/ffmpeg-{{ version }}.tar.gz  # [not win]
+  sha256: dc4b1c622baa34fc68d763cd2818e419d1af90271e0506604905f25a46ea8273  # [not win]
+  # This patch is required to fix https://trac.macports.org/ticket/55746
+  # with Xcode < 7.0, where _Nullable attribues are not supported.
+  # Can probably be removed once the compiler infrastructure is updated.
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler("c") }}
+    - pkg-config  # [not win]
+    - libtool  # [not win]
+    - nasm  # [not win]
+    - 7za  # [win]
+    - curl >=7  # [win]
+    - openssl  # [win]
+  host:
+    - bzip2  # [not win]
+    - freetype  # [not win]
+    - libiconv  # [not win]
+    - x264  # [not win]
+    - zlib  # [not win]
+    - gnutls  # [not win]
+  run:
+    - bzip2  # [not win]
+    - freetype  # [not win]
+    - libiconv  # [not win]
+    - x264  # [not win]
+    - zlib  # [not win]
+    - gnutls  # [not win]
+
+test:
+  commands:
+    - ffmpeg --help
+    - ffmpeg -codecs | grep "DEVI.S zlib"  # [unix]
+    - ffmpeg -codecs | grep "DEV.LS h264"  # [unix]
+    - ffmpeg -protocols | grep "https"  # [not win]
+    # Verify dynamic libraries on all systems
+    {% set ffmpeg_libs = [
+        "avcodec",
+        "avdevice",
+        "swresample",
+        "postproc",
+        "avfilter",
+        "swresample",
+        "avcodec",
+        "avformat",
+        "swscale",
+        "avresample"
+    ] %}
+    {% for each_ffmpeg_lib in ffmpeg_libs %}
+    - test -f $PREFIX/lib/lib{{ each_ffmpeg_lib }}.dylib  # [osx]
+    - test -f $PREFIX/lib/lib{{ each_ffmpeg_lib }}.so     # [linux]
+    {% endfor %}
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+
+about:
+  home: http://www.ffmpeg.org/
+  license: GPL 3
+  license_file: COPYING.GPLv3  # [unix]
+  summary: Cross-platform solution to record, convert and stream audio and video.
+
+extra:
+  recipe-maintainers:
+    - danielballan
+    - jakirkham
+    - 183amir
+    - caspervdw
+    - patricksnape
+    - ocefpaf
+    - sdvillal
+    - carlodri

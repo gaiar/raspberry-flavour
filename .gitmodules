@@ -1,0 +1,6 @@
+[submodule "feedstocks/nb_conda-feedstock"]
+	path = feedstocks/nb_conda-feedstock
+	url = https://github.com/conda-forge/nb_conda-feedstock.git
+[submodule "feedstocks/nb_conda_kernels-feedstock"]
+	path = feedstocks/nb_conda_kernels-feedstock
+	url = https://github.com/conda-forge/nb_conda_kernels-feedstock.git
