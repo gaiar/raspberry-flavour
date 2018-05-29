@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/gaiar/berryconda3/bin/conda-build-all", line 4, in <module>
+    import conda_build_all.cli
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build_all/cli.py", line 8, in <module>
+    import conda_build_all.builder
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build_all/builder.py", line 36, in <module>
+    from . import version_matrix as vn_matrix
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build_all/version_matrix.py", line 19, in <module>
+    for attr in ['Unsatisfiable', 'NoPackagesFound'])
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build_all/version_matrix.py", line 19, in <genexpr>
+    for attr in ['Unsatisfiable', 'NoPackagesFound'])
+AttributeError: module 'conda.resolve' has no attribute 'NoPackagesFound'

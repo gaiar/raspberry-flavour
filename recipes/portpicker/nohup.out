@@ -1,0 +1,87 @@
+Adding in variants from internal_defaults
+INFO:conda_build.variants:Adding in variants from internal_defaults
+Attempting to finalize metadata for portpicker
+INFO:conda_build.metadata:Attempting to finalize metadata for portpicker
+running install
+running build
+running build_py
+creating build
+creating build/lib
+copying src/portpicker.py -> build/lib
+running build_scripts
+creating build/scripts-3.6
+copying and adjusting src/portserver.py -> build/scripts-3.6
+changing mode of build/scripts-3.6/portserver.py from 644 to 755
+running install_lib
+copying build/lib/portpicker.py -> /home/gaiar/berryconda3/conda-bld/portpicker_1527624722337/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib/python3.6/site-packages
+byte-compiling /home/gaiar/berryconda3/conda-bld/portpicker_1527624722337/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib/python3.6/site-packages/portpicker.py to portpicker.cpython-36.pyc
+running install_scripts
+copying build/scripts-3.6/portserver.py -> /home/gaiar/berryconda3/conda-bld/portpicker_1527624722337/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin
+changing mode of /home/gaiar/berryconda3/conda-bld/portpicker_1527624722337/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin/portserver.py to 755
+running install_egg_info
+Writing /home/gaiar/berryconda3/conda-bld/portpicker_1527624722337/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib/python3.6/site-packages/portpicker-1.2.0-py3.6.egg-info
+BUILD START: ['portpicker-1.2.0-py36_0.tar.bz2']
+
+The following NEW packages will be INSTALLED:
+
+    ca-certificates: 2018.4.16-0              local
+    certifi:         2018.1.18-py36h85a5227_0      
+    ncurses:         6.1-0                    local
+    openssl:         1.0.2o-0                 local
+    pip:             9.0.1-py36_0                  
+    python:          3.6.3-hea4cac4_0              
+    readline:        6.3-0                    local
+    setuptools:      38.4.0-py36hd934b87_0         
+    sqlite:          3.15.0-0                      
+    tk:              8.6.6-0                       
+    wheel:           0.30.0-py36h76583d5_0         
+    xz:              5.2.2-0                       
+    zlib:            1.2.11-0                 local
+
+Source cache directory is: /home/gaiar/berryconda3/conda-bld/src_cache
+Downloading source to cache: portpicker-1.2.0_3e4c85b5c2.tar.gz
+Downloading https://pypi.io/packages/source/p/portpicker/portpicker-1.2.0.tar.gz
+Success
+Extracting download
+source tree in: /home/gaiar/berryconda3/conda-bld/portpicker_1527624722337/work
+Packaging portpicker
+INFO:conda_build.build:Packaging portpicker
+Packaging portpicker-1.2.0-py36_0
+INFO:conda_build.build:Packaging portpicker-1.2.0-py36_0
+compiling .pyc files...
+number of files: 4
+Fixing permissions
+Fixing permissions
+Detected hard-coded path in text file bin/portserver.py
+updating: portpicker-1.2.0-py36_0.tar.bz2
+TEST START: /home/gaiar/berryconda3/conda-bld/linux-armv7l/portpicker-1.2.0-py36_0.tar.bz2
+Updating index at /home/gaiar/berryconda3/conda-bld/linux-armv7l to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/gaiar/berryconda3/conda-bld/linux-armv7l to make package installable with dependencies
+Updating index at /home/gaiar/berryconda3/conda-bld/noarch to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/gaiar/berryconda3/conda-bld/noarch to make package installable with dependencies
+Adding in variants from /tmp/tmpoa40ctwl/info/recipe/conda_build_config.yaml
+INFO:conda_build.variants:Adding in variants from /tmp/tmpoa40ctwl/info/recipe/conda_build_config.yaml
+detecting package type ...
+conda
+extracting package attributes for upload ...
+done
+
+Uploading file gaiar/portpicker/1.2.0/linux-armv7l/portpicker-1.2.0-py36_0.tar.bz2 ... 
+Using Anaconda API: https://api.anaconda.org
+ uploaded 0 of 16Kb: 0.00% ETA: 0.0 minutes uploaded 0 of 16Kb: 0.22% ETA: 6.1 minutes uploaded 0 of 16Kb: 0.54% ETA: 2.5 minutes uploaded 0 of 16Kb: 0.55% ETA: 2.4 minutes uploaded 0 of 16Kb: 0.69% ETA: 1.9 minutes uploaded 0 of 16Kb: 0.70% ETA: 1.9 minutes uploaded 0 of 16Kb: 0.92% ETA: 1.4 minutes uploaded 0 of 16Kb: 1.19% ETA: 1.1 minutes uploaded 0 of 16Kb: 1.20% ETA: 1.1 minutes uploaded 0 of 16Kb: 1.24% ETA: 1.1 minutes uploaded 0 of 16Kb: 1.25% ETA: 1.1 minutes uploaded 0 of 16Kb: 1.47% ETA: 0.9 minutes uploaded 0 of 16Kb: 1.73% ETA: 0.8 minutes uploaded 0 of 16Kb: 1.74% ETA: 0.8 minutes uploaded 0 of 16Kb: 2.04% ETA: 0.7 minutes uploaded 0 of 16Kb: 2.05% ETA: 0.6 minutes uploaded 0 of 16Kb: 2.27% ETA: 0.6 minutes uploaded 0 of 16Kb: 2.55% ETA: 0.5 minutes uploaded 0 of 16Kb: 2.56% ETA: 0.5 minutes uploaded 1 of 16Kb: 12.12% ETA: 0.1 minutes uploaded 1 of 16Kb: 12.13% ETA: 0.1 minutes uploaded 2 of 16Kb: 12.34% ETA: 0.1 minutes uploaded 2 of 16Kb: 12.72% ETA: 0.1 minutes uploaded 2 of 16Kb: 12.73% ETA: 0.1 minutes uploaded 2 of 16Kb: 12.75% ETA: 0.1 minutes uploaded 2 of 16Kb: 12.76% ETA: 0.1 minutes uploaded 2 of 16Kb: 12.98% ETA: 0.1 minutes uploaded 2 of 16Kb: 13.31% ETA: 0.1 minutes uploaded 2 of 16Kb: 13.32% ETA: 0.1 minutes uploaded 2 of 16Kb: 13.42% ETA: 0.1 minutes uploaded 2 of 16Kb: 13.43% ETA: 0.1 minutes uploaded 2 of 16Kb: 13.65% ETA: 0.1 minutes uploaded 2 of 16Kb: 13.99% ETA: 0.1 minutes uploaded 2 of 16Kb: 14.00% ETA: 0.1 minutes uploaded 2 of 16Kb: 14.33% ETA: 0.1 minutes uploaded 2 of 16Kb: 14.35% ETA: 0.1 minutes uploaded 2 of 16Kb: 14.56% ETA: 0.1 minutes uploaded 2 of 16Kb: 14.87% ETA: 0.1 minutes uploaded 2 of 16Kb: 14.88% ETA: 0.1 minutes uploaded 2 of 16Kb: 14.98% ETA: 0.1 minutes uploaded 2 of 16Kb: 14.99% ETA: 0.1 minutes uploaded 2 of 16Kb: 15.21% ETA: 0.1 minutes uploaded 2 of 16Kb: 15.57% ETA: 0.1 minutes uploaded 2 of 16Kb: 15.59% ETA: 0.1 minutes uploaded 3 of 16Kb: 19.44% ETA: 0.1 minutes uploaded 3 of 16Kb: 19.45% ETA: 0.1 minutes uploaded 3 of 16Kb: 19.66% ETA: 0.1 minutes uploaded 3 of 16Kb: 20.00% ETA: 0.1 minutes uploaded 3 of 16Kb: 20.01% ETA: 0.1 minutes uploaded 3 of 16Kb: 20.40% ETA: 0.1 minutes uploaded 3 of 16Kb: 20.41% ETA: 0.1 minutes uploaded 3 of 16Kb: 20.63% ETA: 0.1 minutes uploaded 3 of 16Kb: 20.99% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.00% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.05% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.06% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.28% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.61% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.62% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.65% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.66% ETA: 0.1 minutes uploaded 3 of 16Kb: 21.88% ETA: 0.1 minutes uploaded 3 of 16Kb: 22.19% ETA: 0.1 minutes uploaded 3 of 16Kb: 22.20% ETA: 0.1 minutes uploaded 3 of 16Kb: 22.35% ETA: 0.1 minutes uploaded 3 of 16Kb: 22.37% ETA: 0.1 minutes uploaded 3 of 16Kb: 22.58% ETA: 0.0 minutes uploaded 3 of 16Kb: 23.20% ETA: 0.0 minutes uploaded 3 of 16Kb: 23.41% ETA: 0.0 minutes uploaded 11 of 16Kb: 72.68% ETA: 0.0 minutes uploaded 16 of 16Kb: 99.76% ETA: 0.0 minutes uploaded 16 of 16Kb: 99.77% ETA: 0.0 minutes uploaded 16 of 16Kb: 100.00% ETA: 0.0 minutes
+
+Upload(s) Complete
+
+Package located at:
+https://anaconda.org/gaiar/portpicker
+
+
+Nothing to test for: /home/gaiar/berryconda3/conda-bld/linux-armv7l/portpicker-1.2.0-py36_0.tar.bz2
+Uploading portpicker-1.2.0-py36_0.tar.bz2 to anaconda.org
+
+
+
+####################################################################################
+Source and build intermediates have been left in /home/gaiar/berryconda3/conda-bld.
+There are currently 24 accumulated.
+To remove them, you can run the ```conda build purge``` command

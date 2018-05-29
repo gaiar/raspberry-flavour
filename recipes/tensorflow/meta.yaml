@@ -1,0 +1,62 @@
+package:
+  name: tensorflow
+  version: "1.8.0"
+
+build:
+  number: 0
+  #  Google supplies whl files on PyPI for:
+  # - Linux: Python 2.7, 3.3, 3.4, 3.5 and 3.6
+  # - OS X: Python 2.7, 3.5 and 3.6
+  # - Win-64: Python 3.5 and 3.6
+  skip: True  # [win32]
+  skip: True  # [win64]
+  skip: True  # [osx]
+  skip: True  # [py26]
+  skip: True  # [py33 and py36]
+  entry_points:
+    - freeze_graph = tensorflow.python.tools.freeze_graph:run_main
+    - toco_from_protos = tensorflow.contrib.lite.toco.python.toco_from_protos:main  # [not win]
+    - saved_model_cli = tensorflow.python.tools.saved_model_cli:main
+    - tensorboard = tensorboard.main:run_main
+
+
+requirements:
+  build:
+    - python 3.5
+    - pip
+  run:
+    - python 3.5
+    - absl-py >=0.1.6
+    - astor >=0.6.0
+    - gast >=0.2.0
+    - numpy >=1.13.3
+    - six >=1.10.0
+    - protobuf >=3.4.0
+    #- tensorboard >=1.8.0, <1.9.0
+    - termcolor >=1.1.0
+    - grpcio >=1.8.6
+    - enum34 >=1.1.6              # [py<34]
+    - backports.weakref >=1.0rc1  # [py2k]
+
+test:
+  requires:
+    - mock >=2.0.0                # [py2k]
+  imports:
+    # Skip the import test on Linux as wheel file require a more recent
+    # version of GLIBC++ than the VM used to build and test package.
+    - tensorflow  # [not linux]
+  commands:
+    #- tensorboard --help | grep USAGE        # [osx]
+    #- tensorboard --help | findstr USAGE     # [win]
+    - freeze_graph --help                    # [not linux]
+    - toco_from_protos --help                # [osx]
+    - saved_model_cli --help                 # [not linux]
+
+about:
+  home: http://tensorflow.org/
+  license: Apache 2.0
+  summary: TensorFlow helps the tensors flow
+
+extra:
+  recipe-maintainers:
+    - gaiar

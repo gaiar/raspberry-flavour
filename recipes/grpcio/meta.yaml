@@ -1,0 +1,67 @@
+{% set name = "grpcio" %}
+{% set version = "1.12.0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "e1fd1f0782751d281e7d4e67b8d3143f0326cf3a7ab7c7ccf21ee51a152a5c37" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - six >=1.5.2
+  run:
+    - python
+    - six >=1.5.2
+
+test:
+  imports:
+    - grpc
+    - grpc._cython
+    - grpc._cython._cygrpc
+    - grpc.beta
+    - grpc.experimental
+    - grpc.framework
+    - grpc.framework.common
+    - grpc.framework.foundation
+    - grpc.framework.interfaces
+    - grpc.framework.interfaces.base
+    - grpc.framework.interfaces.face
+
+about:
+  home: https://grpc.io
+  license: Apache Software License
+  license_family: APACHE
+  license_file: ''
+  summary: HTTP/2-based RPC framework
+  description: "gRPC Python\n===========\n\nPackage for gRPC Python.\n\nInstallation\n------------\n\ngRPC Python is available for Linux, macOS, and Windows.\n\nFrom PyPI\n~~~~~~~~~\n\nIf you are installing\
+    \ locally...\n\n::\n\n  $ pip install grpcio\n\nElse system wide (on Ubuntu)...\n\n::\n\n  $ sudo pip install grpcio\n\nIf you're on Windows make sure that you installed the :code:`pip.exe` component\n\
+    when you installed Python (if not go back and install it!) then invoke:\n\n::\n\n  $ pip.exe install grpcio\n\nWindows users may need to invoke :code:`pip.exe` from a command line ran as\nadministrator.\n\
+    \nn.b. On Windows and on Mac OS X one *must* have a recent release of :code:`pip`\nto retrieve the proper wheel from PyPI. Be sure to upgrade to the latest\nversion!\n\nFrom Source\n~~~~~~~~~~~\n\n\
+    Building from source requires that you have the Python headers (usually a\npackage named :code:`python-dev`).\n\n::\n\n  $ export REPO_ROOT=grpc  # REPO_ROOT can be any directory of your choice\n  $\
+    \ git clone -b $(curl -L https://grpc.io/release) https://github.com/grpc/grpc $REPO_ROOT\n  $ cd $REPO_ROOT\n  $ git submodule update --init\n\n  # For the next two commands do `sudo pip install` if\
+    \ you get permission-denied errors\n  $ pip install -rrequirements.txt\n  $ GRPC_PYTHON_BUILD_WITH_CYTHON=1 pip install .\n\nYou cannot currently install Python from source on Windows. Things might\
+    \ work\nout for you in MSYS2 (follow the Linux instructions), but it isn't officially\nsupported at the moment.\n\nTroubleshooting\n~~~~~~~~~~~~~~~\n\nHelp, I ...\n\n* **... see a** :code:`pkg_resources.VersionConflict`\
+    \ **when I try to install\n  grpc**\n\n  This is likely because :code:`pip` doesn't own the offending dependency,\n  which in turn is likely because your operating system's package manager owns\n  it.\
+    \ You'll need to force the installation of the dependency:\n\n  :code:`pip install --ignore-installed $OFFENDING_DEPENDENCY`\n\n  For example, if you get an error like the following:\n\n  ::\n\n   \
+    \ Traceback (most recent call last):\n    File \"<string>\", line 17, in <module>\n     ...\n    File \"/usr/lib/python2.7/dist-packages/pkg_resources.py\", line 509, in find\n      raise VersionConflict(dist,\
+    \ req)\n    pkg_resources.VersionConflict: (six 1.8.0 (/usr/lib/python2.7/dist-packages), Requirement.parse('six>=1.10'))\n\n  You can fix it by doing:\n\n  ::\n\n    sudo pip install --ignore-installed\
+    \ six\n\n* **... see the following error on some platforms**\n\n  ::\n\n    /tmp/pip-build-U8pSsr/cython/Cython/Plex/Scanners.c:4:20: fatal error: Python.h: No such file or directory\n    #include \"\
+    Python.h\"\n                    ^\n    compilation terminated.\n\n  You can fix it by installing `python-dev` package. i.e\n\n  ::\n\n    sudo apt-get install python-dev\n\n\n\n"
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''

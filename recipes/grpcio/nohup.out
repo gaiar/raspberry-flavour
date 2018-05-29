@@ -1,0 +1,6 @@
+Adding in variants from internal_defaults
+INFO:conda_build.variants:Adding in variants from internal_defaults
+Adding in variants from config.variant
+INFO:conda_build.variants:Adding in variants from config.variant
+Attempting to finalize metadata for grpcio
+INFO:conda_build.metadata:Attempting to finalize metadata for grpcio
