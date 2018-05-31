@@ -1,0 +1,52 @@
+{% set name = "pillow-simd" %}
+{% set version = "5.1.1.post0" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "994e1b86dfd293d614fd20657c6cf64628df8e1a756cbb2d4064f5f7fee26ab6" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  git_url: "https://github.com/uploadcare/pillow-simd.git"
+  git_rev: "0f632c08449d9e359b371d24cc7ec5cc2aee2d6c"
+build:
+  number: 0
+  script: CC="cc -march=native -mtune=native" python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - PIL
+  requires:
+    - pytest
+
+about:
+  home: https://github.com/uploadcare/pillow-simd
+  license: Standard PIL License
+  license_family: OTHER
+  license_file: ''
+  summary: Python Imaging Library (Fork)
+  description: '
+
+    `Pillow-SIMD repo and readme <https://github.com/uploadcare/pillow-simd>`_
+
+
+    `Pillow-SIMD changelog <https://github.com/uploadcare/pillow-simd/blob/simd/3.4.x/CHANGES.SIMD.rst>`_
+
+
+    `Pillow documentation <https://pillow.readthedocs.io/>`_
+
+    '
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''
