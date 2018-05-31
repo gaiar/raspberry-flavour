@@ -1,0 +1,65 @@
+Adding in variants from internal_defaults
+INFO:conda_build.variants:Adding in variants from internal_defaults
+Attempting to finalize metadata for gnutls
+INFO:conda_build.metadata:Attempting to finalize metadata for gnutls
+Adding in variants from config.variant
+INFO:conda_build.variants:Adding in variants from config.variant
+
+Leaving build/test directories:
+  Work:	 /home/gaiar/berryconda3/conda-bld/work 
+  Test:	 /home/gaiar/berryconda3/conda-bld/test_tmp 
+Leaving build/test environments:
+  Test:	source activate  /home/gaiar/berryconda3/conda-bld/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p 
+  Build:	source activate  /home/gaiar/berryconda3/conda-bld/_build_env 
+
+
+Traceback (most recent call last):
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/environ.py", line 706, in get_install_actions
+    actions = install_actions(prefix, index, specs, force=True)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda/plan.py", line 461, in install_actions
+    update_deps, pinned)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda/plan.py", line 634, in get_actions_for_dists
+    pkgs = r.install(specs, installed, update_deps=update_deps)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda/resolve.py", line 813, in install
+    pkgs = self.solve(specs, returnall=returnall)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda/resolve.py", line 853, in solve
+    reduced_index = self.get_reduced_index(specs)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda/resolve.py", line 374, in get_reduced_index
+    specs, features = self.verify_specs(specs)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda/resolve.py", line 300, in verify_specs
+    raise ResolvePackageNotFound(bad_deps)
+conda.exceptions.ResolvePackageNotFound: 
+  - nettle 3.3|3.3.*
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gaiar/berryconda3/bin/conda-build", line 11, in <module>
+    sys.exit(main())
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/cli/main_build.py", line 413, in main
+    execute(sys.argv[1:])
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/cli/main_build.py", line 404, in execute
+    verify=args.verify)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/api.py", line 188, in build
+    need_source_download=need_source_download, config=config, variants=variants)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/build.py", line 1913, in build_tree
+    notest=notest,
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/build.py", line 969, in build
+    output_metas = expand_outputs([(m, need_source_download, need_reparse_in_env)])
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/render.py", line 573, in expand_outputs
+    for (output_dict, m) in _m.get_output_metadata_set(permit_unsatisfiable_variants=False):
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/metadata.py", line 1809, in get_output_metadata_set
+    permit_unsatisfiable_variants=permit_unsatisfiable_variants)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/metadata.py", line 662, in finalize_outputs_pass
+    fm = finalize_metadata(om, permit_unsatisfiable_variants=permit_unsatisfiable_variants)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/render.py", line 370, in finalize_metadata
+    exclude_pattern)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/render.py", line 293, in add_upstream_pins
+    permit_unsatisfiable_variants, exclude_pattern)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/render.py", line 281, in _read_upstream_pin_files
+    permit_unsatisfiable_variants=permit_unsatisfiable_variants)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/render.py", line 117, in get_env_dependencies
+    channel_urls=tuple(m.config.channel_urls))
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/environ.py", line 708, in get_install_actions
+    raise DependencyNeedsBuildingError(exc, subdir=subdir)
+conda_build.exceptions.DependencyNeedsBuildingError: Unsatisfiable dependencies for platform linux-armv7l: {'nettle 3.3|3.3.*'}

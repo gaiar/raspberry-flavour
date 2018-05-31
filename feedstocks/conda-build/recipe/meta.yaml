@@ -1,0 +1,110 @@
+{% set name = "conda-build" %}
+{% set version = "3.10.4" %}
+#{% set sha256 = "a32d51e123f3d3a26e78d189234155ef9720e3e3e854bb3e18e77eb2884412f1" %}
+{% set sha256 = "b12bca8af1eb5725a76d8af942c37a8d1d6841baec8c9953c51693532c0187b5" %}
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/conda/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  entry_points:
+    - conda-build = conda_build.cli.main_build:main
+    - conda-convert = conda_build.cli.main_convert:main
+    - conda-develop = conda_build.cli.main_develop:main
+    - conda-index = conda_build.cli.main_index:main
+    - conda-inspect = conda_build.cli.main_inspect:main
+    - conda-metapackage = conda_build.cli.main_metapackage:main
+    - conda-render = conda_build.cli.main_render:main
+    - conda-skeleton = conda_build.cli.main_skeleton:main
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - beautifulsoup4
+    - chardet
+    - conda  >=4.3
+    - conda-verify
+    - contextlib2   # [py<34]
+    - enum34        # [py<34]
+    - filelock
+    - futures       # [py<3]
+    - jinja2
+    - patchelf      # [linux]
+    - pkginfo
+    - psutil
+    - python
+    - pyyaml
+    - scandir       # [py<34]
+    - six
+    - glob2
+
+test:
+  # If you run the test suite (~10 min), these are required
+  # requires:
+  #   - pytest
+  #   - pytest-timeout
+  #   - pytest-catchlog
+
+  files:
+    - test_bdist_conda_setup.py
+
+  imports:
+    - conda_build
+
+  commands:
+    # Check for all subcommands
+    - which conda-build  # [unix]
+    - where conda-build  # [win]
+    - conda-build -h
+    - which conda-convert  # [unix]
+    - where conda-convert  # [win]
+    - conda-convert -h
+    - which conda-develop  # [unix]
+    - where conda-develop  # [win]
+    - conda-develop -h
+    - which conda-index  # [unix]
+    - where conda-index  # [win]
+    - conda-index -h
+    - which conda-inspect  # [unix]
+    - where conda-inspect  # [win]
+    - conda-inspect linkages -h \| grep "--name ENVIRONMENT"  # [unix]
+    - conda-inspect objects -h \| grep "--name ENVIRONMENT"   # [osx]
+    - conda-inspect -h
+    - which conda-metapackage  # [unix]
+    - where conda-metapackage  # [win]
+    - conda-metapackage -h
+    - which conda-render  # [unix]
+    - where conda-render  # [win]
+    - conda-render -h
+    - which conda-skeleton  # [unix]
+    - where conda-skeleton  # [win]
+    - conda-skeleton -h
+
+    # Check for bdist_conda
+    - python test_bdist_conda_setup.py bdist_conda --help
+
+about:
+  home: https://github.com/conda/conda-build
+  summary: tools for building conda packages
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - jjhelmus
+    - msarahan
+    - mwcraig
+    - ocefpaf
+    - patricksnape
+    - pelson
+    - scopatz
+    - stuertz

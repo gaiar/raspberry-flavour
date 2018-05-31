@@ -1,0 +1,47 @@
+{% set version = "2.13.02" %}
+
+{% set VC_VERSION = os.environ.get("VC_VERSION", "")|string %}
+
+package:
+  name: nasm
+  version: {{ version }}
+
+source:
+  fn: nasm-{{ version }}.tar.gz
+  url: http://www.nasm.us/pub/nasm/releasebuilds/{{ version }}/nasm-{{ version }}.tar.gz
+  sha256: 4749fd76a8a26dc7d8871bc97cc2c16cfa0c933f984a13128e94f464f417531a
+
+build:
+  number: 0
+
+{% if VC_VERSION == "" %}
+  skip: true                 # [win]
+{% elif VC_VERSION != "" %}
+  skip: true                 # [unix]
+{% endif %}
+
+  features:
+    - vc{{ VC_VERSION }}     # [win]
+
+requirements:
+  build:
+    - toolchain
+
+test:
+  requires:
+    - vc {{ VC_VERSION }}    # [win]
+
+  commands:
+    - nasm -h
+    - nasm -version
+    - ndisasm -h
+
+about:
+  home: http://www.nasm.us
+  license: BSD 2-Clause
+  license_file: LICENSE
+  summary: "Netwide Assembler: an assembler targetting the Intel x86 series of processors."
+
+extra:
+  recipe-maintainers:
+    - jakirkham

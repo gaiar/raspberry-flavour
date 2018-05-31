@@ -1,0 +1,54 @@
+{% set version = "2018.0.3" %}
+{% set vtag = "2018_U3" %}
+{% set args = " --build-args=stdver=c++11 --install-libs --install-devel --install-docs" %}
+#  no --install-python yet, it will be a separate package
+
+package:
+  name: tbb
+  version: {{ version }}
+
+source:
+  fn: tbb{{ vtag }}_oss_src.tgz
+  url: https://github.com/01org/tbb/archive/{{ vtag }}.tar.gz
+  sha256: 23793c8645480148e9559df96b386b780f92194c80120acce79fcdaae0d81f45
+
+build:
+  number: 0
+  script: python build/build.py {{ args }}                                          # [unix]
+  script: python build/build.py --make-tool=mingw32-make {{ args }}                 # [win]
+  script_env:
+    - OS    # [win]
+  features:
+    - vc9   # [win and py27]
+    - vc14  # [win and py>=35]
+
+requirements:
+  build:
+    - toolchain
+    - python
+    - swig
+    - m2w64-make  # [win]
+
+test:
+  requires:
+    - python
+  commands:
+    - test -f ${PREFIX}/include/tbb/tbb.h  # [unix]
+    - python -c "import ctypes; ctypes.cdll[r'${PREFIX}/lib/libtbb.so.2']"  # [linux]
+    - python -c "import ctypes; ctypes.cdll[r'${PREFIX}/lib/libtbb${SHLIB_EXT}']"  # [unix and not linux]
+    - python -c "import ctypes; ctypes.cdll[r'%PREFIX%\Library\bin\tbb.dll']"  # [win]
+    - if not exist %PREFIX%\\Library\\include\\tbb\\tbb.h exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\tbb.lib exit 1  # [win]
+
+about:
+  home: http://www.threadingbuildingblocks.org
+  license: Apache 2.0
+  license_file: LICENSE
+  summary: High level abstract threading library
+  dev_url: https://github.com/01org/tbb
+  doc_url: https://software.intel.com/en-us/node/506039
+
+extra:
+  recipe-maintainers:
+    - jschueller
+    - anton-malakhov

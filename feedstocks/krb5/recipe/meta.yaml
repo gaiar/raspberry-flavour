@@ -1,0 +1,55 @@
+{% set version = "1.14.6" %}
+
+package:
+  name: krb5
+  version: {{ version }}
+
+source:
+  fn: krb5-{{ version }}.tar.gz
+  url: https://github.com/krb5/krb5/archive/krb5-{{ version }}-final.tar.gz
+  sha256: 34c7d6dfdd03d3c6827676a4c8e8fc590727ce396487da8d1b761ad39d728d9a
+  patches:
+    - eafnosupport.patch  # [win and py<34]
+    - jsoneoverflow.patch  # [win and py<34]
+    - afxres.patch  # [win and py<35]
+    - lshutil.patch  # [win and py<35]
+    - noleash.patch  # [win]
+    - noinstallleash.patch  # [win]
+
+build:
+  number: 0
+  skip: True  # [win and py>35]
+  features:
+    - vc9  # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and py>=35]
+
+requirements:
+  build:
+    - python
+    - bison  # [not win]
+    - autoconf  # [not win]
+    - msinttypes  # [win and py<35]
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
+  run:
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
+
+test:
+  commands:
+    - conda inspect linkages -p $PREFIX krb5  # [not win]
+    - conda inspect objects -p $PREFIX krb5  # [osx]
+
+about:
+  home: http://web.mit.edu/kerberos/
+  license: MIT
+  license_file: doc/notice.rst
+  summary: 'A network authentication protocol.'
+
+extra:
+  recipe-maintainers:
+    - pelson
+    - ocefpaf

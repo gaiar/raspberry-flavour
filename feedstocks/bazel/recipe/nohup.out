@@ -1,0 +1,176 @@
+Adding in variants from internal_defaults
+INFO:conda_build.variants:Adding in variants from internal_defaults
+Attempting to finalize metadata for bazel
+INFO:conda_build.metadata:Attempting to finalize metadata for bazel
+Adding in variants from config.variant
+INFO:conda_build.variants:Adding in variants from config.variant
+Missing dependency openjdk, but found recipe directory, so building openjdk first
+Missing dependency zip, but found recipe directory, so building zip first
+Attempting to finalize metadata for zip
+INFO:conda_build.metadata:Attempting to finalize metadata for zip
+sh unix/configure "cc" "-I. -DUNIX " ""
+Check C compiler type (optimization options)
+  GNU C (-O3)
+Check bzip2 support
+  Check for bzip2 in bzip2 directory
+  Check if OS already has bzip2 library installed
+-- Either bzlib.h or libbz2.a not found - no bzip2
+Check for the C preprocessor
+Check if we can use asm code
+Check for ANSI options
+Check for prototypes
+Check the handling of const
+Check for time_t
+Check for size_t
+Check for off_t
+Check size of UIDs and GIDs
+(Now zip stores variable size UIDs/GIDs using a new extra field.  This
+ tests if this OS uses 16-bit UIDs/GIDs and so if the old 16-bit storage
+ should also be used for backward compatibility.)
+  s.st_uid is 4 bytes
+  s.st_gid is 4 bytes
+-- UID not 2 bytes - disabling old 16-bit UID/GID support
+Check for Large File Support
+  off_t is 8 bytes
+-- yes we have Large File Support!
+Check for wide char support
+-- have wchar_t - enabling Unicode support
+Check for gcc no-builtin flag
+Check for rmdir
+Check for strchr
+Check for strrchr
+Check for rename
+Check for mktemp
+Check for mktime
+Check for mkstemp
+Check for memset
+Check for memmove
+Check for strerror
+Check for errno declaration
+Check for directory libraries
+Check for readlink
+Check for directory include file
+Check for nonexistent include files
+Check for term I/O include file
+Check for valloc
+Check for /usr/local/bin and /usr/local/man
+Check for OS-specific flags
+Check for symbolic links
+eval make -f unix/Makefile zips `cat flags`
+make[1]: Entering directory '/home/gaiar/berryconda3/conda-bld/zip_1527580282410/work'
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zip.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipfile.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipup.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H fileio.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H util.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H globals.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H crypt.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H ttyio.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H unix/unix.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H crc32.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zbz2err.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H deflate.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H trees.c
+cc -o zip  zip.o zipfile.o zipup.o fileio.o util.o globals.o crypt.o ttyio.o unix.o crc32.o zbz2err.o deflate.o trees.o  
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipcloak.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o zipfile_.o zipfile.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o fileio_.o fileio.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o util_.o util.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o unix_.o unix/unix.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o crc32_.o crc32.c
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o crypt_.o crypt.c
+cc -o zipcloak  zipcloak.o zipfile_.o fileio_.o util_.o globals.o unix_.o crc32_.o   crypt_.o ttyio.o 
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipnote.c
+cc -o zipnote  zipnote.o  zipfile_.o fileio_.o util_.o globals.o unix_.o crc32_.o  
+cc -c -I. -DUNIX -O3 -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipsplit.c
+cc -o zipsplit  zipsplit.o zipfile_.o fileio_.o util_.o globals.o unix_.o crc32_.o  
+make[1]: Leaving directory '/home/gaiar/berryconda3/conda-bld/zip_1527580282410/work'
+BUILD START: ['zip-3.0-0.tar.bz2']
+Source cache directory is: /home/gaiar/berryconda3/conda-bld/src_cache
+Downloading source to cache: zip30_f0e8bb1f9b.tgz
+Downloading ftp://ftp.info-zip.org/pub/infozip/src/zip30.tgz
+Success
+Extracting download
+source tree in: /home/gaiar/berryconda3/conda-bld/zip_1527580282410/work
+Packaging zip
+INFO:conda_build.build:Packaging zip
+Packaging zip-3.0-0
+INFO:conda_build.build:Packaging zip-3.0-0
+number of files: 1
+Fixing permissions
+patchelf: file: /home/gaiar/berryconda3/conda-bld/zip_1527580282410/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh/bin/zip
+    setting rpath to: $ORIGIN/../lib
+WARNING (zip,zip): $RPATH/libc.so.6 returned by pyldd. A CDT package?
+Fixing permissions
+updating: zip-3.0-0.tar.bz2
+TEST START: /home/gaiar/berryconda3/conda-bld/linux-armv7l/zip-3.0-0.tar.bz2
+Updating index at /home/gaiar/berryconda3/conda-bld/linux-armv7l to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/gaiar/berryconda3/conda-bld/linux-armv7l to make package installable with dependencies
+Updating index at /home/gaiar/berryconda3/conda-bld/noarch to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/gaiar/berryconda3/conda-bld/noarch to make package installable with dependencies
+Adding in variants from /tmp/tmpmqjp16jk/info/recipe/conda_build_config.yaml
+INFO:conda_build.variants:Adding in variants from /tmp/tmpmqjp16jk/info/recipe/conda_build_config.yaml
++ zip -h
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+Zip 3.0 (July 5th 2008). Usage:
+zip [-options] [-b path] [-t mmddyyyy] [-n suffixes] [zipfile list] [-xi list]
+  The default action is to add or replace zipfile entries from list, which
+  can include the special name - to compress standard input.
+  If zipfile and list are omitted, zip compresses stdin to stdout.
+  -f   freshen: only changed files  -u   update: only changed or new files
+  -d   delete entries in zipfile    -m   move into zipfile (delete OS files)
+  -r   recurse into directories     -j   junk (don't record) directory names
+  -0   store only                   -l   convert LF to CR LF (-ll CR LF to LF)
+  -1   compress faster              -9   compress better
+  -q   quiet operation              -v   verbose operation/print version info
+  -c   add one-line comments        -z   add zipfile comment
+  -@   read names from stdin        -o   make zipfile as old as latest entry
+  -x   exclude the following names  -i   include only the following names
+  -F   fix zipfile (-FF try harder) -D   do not add directory entries
+  -A   adjust self-extracting exe   -J   junk zipfile prefix (unzipsfx)
+  -T   test zipfile integrity       -X   eXclude eXtra file attributes
+  -y   store symbolic links as the link instead of the referenced file
+  -e   encrypt                      -n   don't compress these suffixes
+  -h2  show more help
+  
++ exit 0
+Renaming work directory,  /home/gaiar/berryconda3/conda-bld/zip_1527580282410/work  to  /home/gaiar/berryconda3/conda-bld/zip_1527580282410/work_moved_zip-3.0-0_linux-armv7l
+
+The following NEW packages will be INSTALLED:
+
+    zip: 3.0-0 local
+
+TEST END: /home/gaiar/berryconda3/conda-bld/linux-armv7l/zip-3.0-0.tar.bz2
+Attempting to finalize metadata for openjdk
+INFO:conda_build.metadata:Attempting to finalize metadata for openjdk
+chmod: cannot access 'bin/*': No such file or directory
+BUILD START: ['openjdk-8.0.144-zulu8.23.0.3_1.tar.bz2']
+
+The following NEW packages will be INSTALLED:
+
+    ca-certificates: 2018.4.16-0 local
+    curl:            7.49.1-0         
+    openssl:         1.0.2o-0    local
+    zlib:            1.2.11-0    local
+
+source tree in: /home/gaiar/berryconda3/conda-bld/openjdk_1527580430322/work
+Traceback (most recent call last):
+  File "/home/gaiar/berryconda3/bin/conda-build", line 11, in <module>
+    sys.exit(main())
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/cli/main_build.py", line 413, in main
+    execute(sys.argv[1:])
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/cli/main_build.py", line 404, in execute
+    verify=args.verify)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/api.py", line 188, in build
+    need_source_download=need_source_download, config=config, variants=variants)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/build.py", line 1913, in build_tree
+    notest=notest,
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/build.py", line 1213, in build
+    utils.check_call_env(cmd, env=env, cwd=src_dir)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/utils.py", line 678, in check_call_env
+    return _func_defaulting_env_to_os_environ(subprocess.check_call, *popenargs, **kwargs)
+  File "/home/gaiar/berryconda3/lib/python3.6/site-packages/conda_build/utils.py", line 674, in _func_defaulting_env_to_os_environ
+    return func(_args, **kwargs)
+  File "/home/gaiar/berryconda3/lib/python3.6/subprocess.py", line 291, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['/bin/bash', '-e', '/home/gaiar/berryconda3/conda-bld/openjdk_1527580430322/work/conda_build.sh']' returned non-zero exit status 1.

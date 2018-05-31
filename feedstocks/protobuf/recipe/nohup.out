@@ -1,0 +1,772 @@
+Adding in variants from internal_defaults
+INFO:conda_build.variants:Adding in variants from internal_defaults
+Adding in variants from config.variant
+INFO:conda_build.variants:Adding in variants from config.variant
+Attempting to finalize metadata for protobuf
+INFO:conda_build.metadata:Attempting to finalize metadata for protobuf
+Adding .* to spec 'libprotobuf 3.6.0rc1' to ensure satisfiability.  Please consider putting {{ var_name }}.* or some relational operator (>/</>=/<=) on this spec in meta.yaml, or if req is also a build req, using {{ pin_compatible() }} jinja2 function instead.  See https://conda.io/docs/user-guide/tasks/build-packages/variants.html#pinning-at-the-variant-level
+WARNING:conda_build.utils:Adding .* to spec 'libprotobuf 3.6.0rc1' to ensure satisfiability.  Please consider putting {{ var_name }}.* or some relational operator (>/</>=/<=) on this spec in meta.yaml, or if req is also a build req, using {{ pin_compatible() }} jinja2 function instead.  See https://conda.io/docs/user-guide/tasks/build-packages/variants.html#pinning-at-the-variant-level
+Adding .* to spec 'zlib 1.2.11' to ensure satisfiability.  Please consider putting {{ var_name }}.* or some relational operator (>/</>=/<=) on this spec in meta.yaml, or if req is also a build req, using {{ pin_compatible() }} jinja2 function instead.  See https://conda.io/docs/user-guide/tasks/build-packages/variants.html#pinning-at-the-variant-level
+WARNING:conda_build.utils:Adding .* to spec 'zlib 1.2.11' to ensure satisfiability.  Please consider putting {{ var_name }}.* or some relational operator (>/</>=/<=) on this spec in meta.yaml, or if req is also a build req, using {{ pin_compatible() }} jinja2 function instead.  See https://conda.io/docs/user-guide/tasks/build-packages/variants.html#pinning-at-the-variant-level
+From https://github.com/google/protobuf
+   264e615e8..7d1a8fff1  master               -> master
+ + fdc12af79...14e4b70f7 refs/pull/1012/merge -> refs/pull/1012/merge  (forced update)
+ + 2f82d5a65...a8d014e54 refs/pull/1181/merge -> refs/pull/1181/merge  (forced update)
+ + 02bbb565d...04fef0cea refs/pull/1250/merge -> refs/pull/1250/merge  (forced update)
+ + 7d3ec7132...c7ef65097 refs/pull/1261/merge -> refs/pull/1261/merge  (forced update)
+ + 346880b05...d56443c55 refs/pull/1486/merge -> refs/pull/1486/merge  (forced update)
+ + 8eaed3362...3dc2712e0 refs/pull/1590/merge -> refs/pull/1590/merge  (forced update)
+ + a1b6c4e94...d439b1557 refs/pull/1660/merge -> refs/pull/1660/merge  (forced update)
+ + f5b6d6b80...dadc9d585 refs/pull/1750/merge -> refs/pull/1750/merge  (forced update)
+ + 8b7a3a4e3...c26c2f7b4 refs/pull/1796/merge -> refs/pull/1796/merge  (forced update)
+ + 1f636d59f...737b2c608 refs/pull/1817/merge -> refs/pull/1817/merge  (forced update)
+ + ff1611ee3...beac99285 refs/pull/1839/merge -> refs/pull/1839/merge  (forced update)
+ + 5f9186949...2baee3298 refs/pull/1918/merge -> refs/pull/1918/merge  (forced update)
+ + 46cbfc695...16c1dfd3b refs/pull/1951/merge -> refs/pull/1951/merge  (forced update)
+ + 69db26e21...7de5156a4 refs/pull/2121/merge -> refs/pull/2121/merge  (forced update)
+ + b0f78112d...0e8fc6b09 refs/pull/2230/merge -> refs/pull/2230/merge  (forced update)
+ + b98e223f0...78d129d75 refs/pull/2295/merge -> refs/pull/2295/merge  (forced update)
+ + ea8d36c8d...9596b65fe refs/pull/2296/merge -> refs/pull/2296/merge  (forced update)
+ + 5b266d53f...1967e9d36 refs/pull/2298/merge -> refs/pull/2298/merge  (forced update)
+ + 75eab88fe...67a0ddc3d refs/pull/2299/merge -> refs/pull/2299/merge  (forced update)
+ + 890e436ac...092e6e2bf refs/pull/2310/merge -> refs/pull/2310/merge  (forced update)
+ + 847c62a0c...573273ef8 refs/pull/2470/merge -> refs/pull/2470/merge  (forced update)
+ + 6689942b4...322685804 refs/pull/2478/merge -> refs/pull/2478/merge  (forced update)
+ + 35f6a3dee...6f5e1eae8 refs/pull/2634/merge -> refs/pull/2634/merge  (forced update)
+ + 3f219d5bd...21a91e39b refs/pull/2658/merge -> refs/pull/2658/merge  (forced update)
+ + 508e53efe...6a5eb30ce refs/pull/2680/merge -> refs/pull/2680/merge  (forced update)
+ + 747a95f30...45dd86a0a refs/pull/2744/merge -> refs/pull/2744/merge  (forced update)
+ + 7293c74ba...60c6f3e43 refs/pull/2811/merge -> refs/pull/2811/merge  (forced update)
+ + 13f24ce64...d244144c3 refs/pull/2890/merge -> refs/pull/2890/merge  (forced update)
+ + a7fc57ab0...b8ebb6dc9 refs/pull/2976/merge -> refs/pull/2976/merge  (forced update)
+ + acfe93aff...e3da8b85f refs/pull/3004/merge -> refs/pull/3004/merge  (forced update)
+ + db0d9f42b...1e48b71ea refs/pull/3082/merge -> refs/pull/3082/merge  (forced update)
+ + aa635d777...56796f761 refs/pull/3289/merge -> refs/pull/3289/merge  (forced update)
+ + 5f215fde4...72b7c9650 refs/pull/3292/merge -> refs/pull/3292/merge  (forced update)
+ + 97fdba08a...a5cf95e28 refs/pull/3331/merge -> refs/pull/3331/merge  (forced update)
+ + 480541e63...9fe3fe864 refs/pull/3364/merge -> refs/pull/3364/merge  (forced update)
+ + cc89a43e6...d1b59487a refs/pull/3415/merge -> refs/pull/3415/merge  (forced update)
+ + 62be5aed5...86c686c1e refs/pull/3428/merge -> refs/pull/3428/merge  (forced update)
+ + a0e98c2e7...6072bba8f refs/pull/3507/merge -> refs/pull/3507/merge  (forced update)
+ + 022cbadbb...6e5b00697 refs/pull/3597/merge -> refs/pull/3597/merge  (forced update)
+ + 108200d8c...29cc9e384 refs/pull/3614/merge -> refs/pull/3614/merge  (forced update)
+ + fb3405315...1aaa7417e refs/pull/3664/merge -> refs/pull/3664/merge  (forced update)
+ + d3ce26bfb...e1f6c46c8 refs/pull/3669/merge -> refs/pull/3669/merge  (forced update)
+ + a35d142f1...9a35f1885 refs/pull/3689/merge -> refs/pull/3689/merge  (forced update)
+ + 7d7e869b0...1cc6f4e15 refs/pull/3693/merge -> refs/pull/3693/merge  (forced update)
+ + 4f1943d86...2dbb0e396 refs/pull/3695/merge -> refs/pull/3695/merge  (forced update)
+ + ffa24c93a...28947a04c refs/pull/3724/merge -> refs/pull/3724/merge  (forced update)
+ + 55eb5e375...08c608254 refs/pull/3827/merge -> refs/pull/3827/merge  (forced update)
+ + 3b7de71ef...4f9eae780 refs/pull/3829/merge -> refs/pull/3829/merge  (forced update)
+ + 8314a0352...6aa10897e refs/pull/3847/merge -> refs/pull/3847/merge  (forced update)
+ + e6b608ee7...e4a0aaa06 refs/pull/3863/merge -> refs/pull/3863/merge  (forced update)
+ + b49d9b82d...2b8678ab1 refs/pull/3901/merge -> refs/pull/3901/merge  (forced update)
+ + 06a278e37...363bc4d13 refs/pull/3914/merge -> refs/pull/3914/merge  (forced update)
+ + f7bf460b5...54d299571 refs/pull/3939/merge -> refs/pull/3939/merge  (forced update)
+ + e67f6119c...8858dd6a2 refs/pull/3956/merge -> refs/pull/3956/merge  (forced update)
+ + 4dd51e2ff...6fdb9c3a7 refs/pull/3959/merge -> refs/pull/3959/merge  (forced update)
+ + af6c497e8...207b0e4aa refs/pull/3972/merge -> refs/pull/3972/merge  (forced update)
+ + 77182ed66...846d657ce refs/pull/3981/merge -> refs/pull/3981/merge  (forced update)
+ + e8eeeb4bc...afe2520b3 refs/pull/3985/merge -> refs/pull/3985/merge  (forced update)
+ + cf7bc646b...43450df49 refs/pull/4106/merge -> refs/pull/4106/merge  (forced update)
+ + a970d86f2...4584ee823 refs/pull/4112/merge -> refs/pull/4112/merge  (forced update)
+ + c8e81f034...6bbc67661 refs/pull/4166/merge -> refs/pull/4166/merge  (forced update)
+ + 6bc61790f...3bdb61a7e refs/pull/4168/merge -> refs/pull/4168/merge  (forced update)
+ + d09dd0808...ce561b5f2 refs/pull/4172/merge -> refs/pull/4172/merge  (forced update)
+ + 3ae2a3c59...bdc4d65c2 refs/pull/4191/merge -> refs/pull/4191/merge  (forced update)
+ + 66b56f7a2...6817bd84e refs/pull/4207/merge -> refs/pull/4207/merge  (forced update)
+ + d1a9f7d9c...7825d9dfc refs/pull/4223/merge -> refs/pull/4223/merge  (forced update)
+ + 89b1fea9f...ed6ca1845 refs/pull/4248/merge -> refs/pull/4248/merge  (forced update)
+ + 9902d41a2...6e1d9aa2e refs/pull/4255/merge -> refs/pull/4255/merge  (forced update)
+ + 10a8a2c08...6f67129e5 refs/pull/4289/merge -> refs/pull/4289/merge  (forced update)
+ + 79be35ecb...c7ac1d4b0 refs/pull/4297/merge -> refs/pull/4297/merge  (forced update)
+ + f73c7b72b...c434fee6d refs/pull/4299/merge -> refs/pull/4299/merge  (forced update)
+ + ec1a02579...03cfec71c refs/pull/4304/merge -> refs/pull/4304/merge  (forced update)
+ + 08023db25...2a4c6aa17 refs/pull/4306/merge -> refs/pull/4306/merge  (forced update)
+ + 9f0d8fedd...206572c43 refs/pull/4307/merge -> refs/pull/4307/merge  (forced update)
+ + 07031455e...6edac9837 refs/pull/4312/merge -> refs/pull/4312/merge  (forced update)
+ + 8e1d17f27...15d750518 refs/pull/4318/merge -> refs/pull/4318/merge  (forced update)
+ + 2e7a111e1...ca13abce2 refs/pull/4321/merge -> refs/pull/4321/merge  (forced update)
+ + 23dfd102a...76ff15925 refs/pull/4329/merge -> refs/pull/4329/merge  (forced update)
+ + 6e754d979...f5d530d25 refs/pull/4336/merge -> refs/pull/4336/merge  (forced update)
+ + e9273c4b8...e1020d74a refs/pull/4360/merge -> refs/pull/4360/merge  (forced update)
+ + 471c2ab17...3089f9f5e refs/pull/4362/merge -> refs/pull/4362/merge  (forced update)
+ + 0ea8877c0...30779316e refs/pull/4385/merge -> refs/pull/4385/merge  (forced update)
+ + 7af71d03e...00de45472 refs/pull/4441/merge -> refs/pull/4441/merge  (forced update)
+ + c5d7d5a24...d857068b7 refs/pull/4476/merge -> refs/pull/4476/merge  (forced update)
+ + 2c87cef02...128756718 refs/pull/4608/merge -> refs/pull/4608/merge  (forced update)
+ + c0788e9bb...706ddfd12 refs/pull/4626/merge -> refs/pull/4626/merge  (forced update)
+ + 0d59d040c...4540ba9b1 refs/pull/4642/merge -> refs/pull/4642/merge  (forced update)
+ + 6124d5353...621084058 refs/pull/4643/merge -> refs/pull/4643/merge  (forced update)
+ + 2ce5e8b21...ed33ba4f4 refs/pull/4648/merge -> refs/pull/4648/merge  (forced update)
+ + 89de96a2c...a9158e124 refs/pull/4657/merge -> refs/pull/4657/merge  (forced update)
+ + 523d46a21...2b864e740 refs/pull/4665/merge -> refs/pull/4665/merge  (forced update)
+ + ed12ff527...64f6a5d94 refs/pull/4676/merge -> refs/pull/4676/merge  (forced update)
+ * [new ref]             refs/pull/4693/head  -> refs/pull/4693/head
+ * [new ref]             refs/pull/4693/merge -> refs/pull/4693/merge
+ * [new ref]             refs/pull/4694/head  -> refs/pull/4694/head
+ * [new ref]             refs/pull/4694/merge -> refs/pull/4694/merge
+ * [new ref]             refs/pull/4695/head  -> refs/pull/4695/head
+ * [new ref]             refs/pull/4695/merge -> refs/pull/4695/merge
+ + ced56e57c...d9e070589 refs/pull/782/merge  -> refs/pull/782/merge  (forced update)
+ + 4fb809239...9eb5dd259 refs/pull/928/merge  -> refs/pull/928/merge  (forced update)
+ + 69fd3eef0...580e0b23c refs/pull/987/merge  -> refs/pull/987/merge  (forced update)
+Cloning into '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/work'...
+done.
+Note: checking out '449e532b087e43a45ca6d8eae640a6019e547aca'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 449e532b0... Merge pull request #4673 from acozzette/memory-leak-fix
+Submodule 'third_party/benchmark' (https://github.com/google/benchmark.git) registered for path 'third_party/benchmark'
+Submodule 'third_party/googletest' (https://github.com/google/googletest.git) registered for path 'third_party/googletest'
+Cloning into '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/work/third_party/benchmark'...
+Cloning into '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/work/third_party/googletest'...
+Submodule path 'third_party/benchmark': checked out '5b7683f49e1e9223cf9927b24f6fd3d6bd82e3f8'
+Submodule path 'third_party/googletest': checked out 'c3bb0ee2a63279a803aaad956b9b26d74bf9e6e2'
+running install
+running build
+running build_py
+Generating google/protobuf/descriptor_pb2.py...
+Generating google/protobuf/compiler/plugin_pb2.py...
+Generating google/protobuf/any_pb2.py...
+Generating google/protobuf/api_pb2.py...
+Generating google/protobuf/duration_pb2.py...
+Generating google/protobuf/empty_pb2.py...
+Generating google/protobuf/field_mask_pb2.py...
+Generating google/protobuf/source_context_pb2.py...
+Generating google/protobuf/struct_pb2.py...
+Generating google/protobuf/timestamp_pb2.py...
+Generating google/protobuf/type_pb2.py...
+Generating google/protobuf/wrappers_pb2.py...
+Generating google/protobuf/any_test_pb2.py...
+Generating google/protobuf/map_proto2_unittest_pb2.py...
+Generating google/protobuf/map_unittest_pb2.py...
+Generating google/protobuf/test_messages_proto3_pb2.py...
+Generating google/protobuf/test_messages_proto2_pb2.py...
+Generating google/protobuf/unittest_arena_pb2.py...
+Generating google/protobuf/unittest_no_arena_pb2.py...
+Generating google/protobuf/unittest_no_arena_import_pb2.py...
+Generating google/protobuf/unittest_pb2.py...
+Generating google/protobuf/unittest_custom_options_pb2.py...
+Generating google/protobuf/unittest_import_pb2.py...
+Generating google/protobuf/unittest_import_public_pb2.py...
+Generating google/protobuf/unittest_mset_pb2.py...
+Generating google/protobuf/unittest_mset_wire_format_pb2.py...
+Generating google/protobuf/unittest_no_generic_services_pb2.py...
+Generating google/protobuf/unittest_proto3_arena_pb2.py...
+Generating google/protobuf/util/json_format_proto3_pb2.py...
+Generating google/protobuf/internal/any_test_pb2.py...
+Generating google/protobuf/internal/descriptor_pool_test1_pb2.py...
+Generating google/protobuf/internal/descriptor_pool_test2_pb2.py...
+Generating google/protobuf/internal/factory_test1_pb2.py...
+Generating google/protobuf/internal/factory_test2_pb2.py...
+Generating google/protobuf/internal/file_options_test_pb2.py...
+Generating google/protobuf/internal/import_test_package/inner_pb2.py...
+Generating google/protobuf/internal/import_test_package/outer_pb2.py...
+Generating google/protobuf/internal/missing_enum_values_pb2.py...
+Generating google/protobuf/internal/message_set_extensions_pb2.py...
+Generating google/protobuf/internal/more_extensions_pb2.py...
+Generating google/protobuf/internal/more_extensions_dynamic_pb2.py...
+Generating google/protobuf/internal/more_messages_pb2.py...
+Generating google/protobuf/internal/no_package_pb2.py...
+Generating google/protobuf/internal/packed_field_test_pb2.py...
+Generating google/protobuf/internal/test_bad_identifiers_pb2.py...
+Generating google/protobuf/pyext/python_pb2.py...
+creating build
+creating build/lib.linux-armv7l-3.5
+creating build/lib.linux-armv7l-3.5/google
+copying google/__init__.py -> build/lib.linux-armv7l-3.5/google
+creating build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/field_mask_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_arena_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/api_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/timestamp_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/json_format.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_no_arena_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/text_encoding.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/descriptor.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/descriptor_database.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/reflection.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/test_messages_proto3_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/test_messages_proto2_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/struct_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_no_generic_services_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/any_test_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/map_proto2_unittest_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/duration_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/descriptor_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_no_arena_import_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/wrappers_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_mset_wire_format_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/descriptor_pool.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_import_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/__init__.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_custom_options_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/map_unittest_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/message_factory.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_import_public_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/text_format.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/type_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/message.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/symbol_database.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/service_reflection.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/any_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_mset_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/empty_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/proto_builder.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/unittest_proto3_arena_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/source_context_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf
+copying google/protobuf/service.py -> build/lib.linux-armv7l-3.5/google/protobuf
+creating build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/message_set_extensions_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/text_encoding_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/text_format_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/packed_field_test_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/encoder.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/service_reflection_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/testing_refleaks.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/generator_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/no_package_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/file_options_test_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/test_bad_identifiers_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/missing_enum_values_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/descriptor_pool_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/proto_builder_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/wire_format.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/wire_format_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/message_factory_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/factory_test2_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/more_extensions_dynamic_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/symbol_database_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/api_implementation.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/json_format_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/descriptor_pool_test2_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/_parameterized.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/decoder.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/any_test_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/enum_type_wrapper.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/descriptor_database_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/__init__.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/test_util.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/descriptor_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/more_messages_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/python_message.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/containers.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/type_checkers.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/factory_test1_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/well_known_types_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/descriptor_pool_test1_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/message_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/message_listener.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/reflection_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/unknown_fields_test.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/more_extensions_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+copying google/protobuf/internal/well_known_types.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal
+creating build/lib.linux-armv7l-3.5/google/protobuf/compiler
+copying google/protobuf/compiler/plugin_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/compiler
+copying google/protobuf/compiler/__init__.py -> build/lib.linux-armv7l-3.5/google/protobuf/compiler
+creating build/lib.linux-armv7l-3.5/google/protobuf/pyext
+copying google/protobuf/pyext/python_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/pyext
+copying google/protobuf/pyext/__init__.py -> build/lib.linux-armv7l-3.5/google/protobuf/pyext
+copying google/protobuf/pyext/cpp_message.py -> build/lib.linux-armv7l-3.5/google/protobuf/pyext
+creating build/lib.linux-armv7l-3.5/google/protobuf/util
+copying google/protobuf/util/json_format_proto3_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/util
+copying google/protobuf/util/__init__.py -> build/lib.linux-armv7l-3.5/google/protobuf/util
+creating build/lib.linux-armv7l-3.5/google/protobuf/internal/import_test_package
+copying google/protobuf/internal/import_test_package/outer_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal/import_test_package
+copying google/protobuf/internal/import_test_package/inner_pb2.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal/import_test_package
+copying google/protobuf/internal/import_test_package/__init__.py -> build/lib.linux-armv7l-3.5/google/protobuf/internal/import_test_package
+Skipping optional fixer: buffer
+Skipping optional fixer: idioms
+Skipping optional fixer: set_literal
+Skipping optional fixer: ws_comma
+running build_ext
+building 'google.protobuf.pyext._message' extension
+creating build/temp.linux-armv7l-3.5
+creating build/temp.linux-armv7l-3.5/google
+creating build/temp.linux-armv7l-3.5/google/protobuf
+creating build/temp.linux-armv7l-3.5/google/protobuf/pyext
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/map_container.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/map_container.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/message_factory.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/message_factory.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/descriptor_database.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/descriptor_database.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/repeated_scalar_container.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/repeated_scalar_container.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/message.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/message.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/descriptor_containers.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/descriptor_containers.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/message_module.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/message_module.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/descriptor_pool.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/descriptor_pool.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/descriptor.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/descriptor.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/repeated_composite_container.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/repeated_composite_container.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I. -I../src -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/pyext/extension_dict.cc -o build/temp.linux-armv7l-3.5/google/protobuf/pyext/extension_dict.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+g++ -pthread -shared -L/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib -Wl,-rpath=/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib,--no-as-needed build/temp.linux-armv7l-3.5/google/protobuf/pyext/map_container.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/message_factory.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/descriptor_database.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/repeated_scalar_container.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/message.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/descriptor_containers.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/message_module.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/descriptor_pool.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/descriptor.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/repeated_composite_container.o build/temp.linux-armv7l-3.5/google/protobuf/pyext/extension_dict.o -L../src/.libs -L/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib -lprotobuf -lpython3.5m -o build/lib.linux-armv7l-3.5/google/protobuf/pyext/_message.cpython-35m-arm-linux-gnueabihf.so
+building 'google.protobuf.internal._api_implementation' extension
+creating build/temp.linux-armv7l-3.5/google/protobuf/internal
+gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/include/python3.5m -c google/protobuf/internal/api_implementation.cc -o build/temp.linux-armv7l-3.5/google/protobuf/internal/api_implementation.o -Wno-write-strings -Wno-invalid-offsetof -Wno-sign-compare -DPYTHON_PROTO2_CPP_IMPL_V2
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+g++ -pthread -shared -L/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib -Wl,-rpath=/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib,--no-as-needed build/temp.linux-armv7l-3.5/google/protobuf/internal/api_implementation.o -L/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib -lpython3.5m -o build/lib.linux-armv7l-3.5/google/protobuf/internal/_api_implementation.cpython-35m-arm-linux-gnueabihf.so
+running install_lib
+Skipping installation of /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/__init__.py (namespace package)
+copying google/protobuf/field_mask_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_arena_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/api_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/timestamp_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/json_format.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_no_arena_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/text_encoding.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/descriptor.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/descriptor_database.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/reflection.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/test_messages_proto3_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/test_messages_proto2_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/struct_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_no_generic_services_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/any_test_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/map_proto2_unittest_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/duration_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/descriptor_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_no_arena_import_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/wrappers_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_mset_wire_format_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/descriptor_pool.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_import_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/__init__.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_custom_options_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/map_unittest_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/message_factory.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_import_public_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/text_format.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/type_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/message.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/symbol_database.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/service_reflection.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/any_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_mset_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/empty_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/proto_builder.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/unittest_proto3_arena_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/source_context_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/service.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf
+copying google/protobuf/internal/message_set_extensions_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/text_encoding_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/text_format_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/packed_field_test_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/encoder.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/service_reflection_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/testing_refleaks.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/generator_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/no_package_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/file_options_test_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/test_bad_identifiers_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/missing_enum_values_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/descriptor_pool_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/proto_builder_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/wire_format.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/wire_format_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/message_factory_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/factory_test2_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/more_extensions_dynamic_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/symbol_database_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/api_implementation.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/json_format_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/descriptor_pool_test2_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/_parameterized.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/decoder.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/any_test_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/enum_type_wrapper.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/descriptor_database_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/__init__.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/test_util.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/descriptor_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/_api_implementation.cpython-35m-arm-linux-gnueabihf.so -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/more_messages_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/python_message.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/containers.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/type_checkers.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/factory_test1_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/well_known_types_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/descriptor_pool_test1_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/message_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/message_listener.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/reflection_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/unknown_fields_test.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/more_extensions_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/well_known_types.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal
+copying google/protobuf/internal/import_test_package/outer_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/import_test_package
+copying google/protobuf/internal/import_test_package/inner_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/import_test_package
+copying google/protobuf/internal/import_test_package/__init__.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/import_test_package
+copying google/protobuf/compiler/plugin_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/compiler
+copying google/protobuf/compiler/__init__.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/compiler
+copying google/protobuf/pyext/python_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/pyext
+copying google/protobuf/pyext/__init__.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/pyext
+copying google/protobuf/pyext/_message.cpython-35m-arm-linux-gnueabihf.so -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/pyext
+copying google/protobuf/pyext/cpp_message.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/pyext
+copying google/protobuf/util/json_format_proto3_pb2.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/util
+copying google/protobuf/util/__init__.py -> /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/util
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/field_mask_pb2.py to field_mask_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_arena_pb2.py to unittest_arena_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/api_pb2.py to api_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/timestamp_pb2.py to timestamp_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/json_format.py to json_format.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_no_arena_pb2.py to unittest_no_arena_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/text_encoding.py to text_encoding.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/descriptor.py to descriptor.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_pb2.py to unittest_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/descriptor_database.py to descriptor_database.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/reflection.py to reflection.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/test_messages_proto3_pb2.py to test_messages_proto3_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/test_messages_proto2_pb2.py to test_messages_proto2_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/struct_pb2.py to struct_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_no_generic_services_pb2.py to unittest_no_generic_services_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/any_test_pb2.py to any_test_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/map_proto2_unittest_pb2.py to map_proto2_unittest_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/duration_pb2.py to duration_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/descriptor_pb2.py to descriptor_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_no_arena_import_pb2.py to unittest_no_arena_import_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/wrappers_pb2.py to wrappers_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_mset_wire_format_pb2.py to unittest_mset_wire_format_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/descriptor_pool.py to descriptor_pool.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_import_pb2.py to unittest_import_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/__init__.py to __init__.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_custom_options_pb2.py to unittest_custom_options_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/map_unittest_pb2.py to map_unittest_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/message_factory.py to message_factory.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_import_public_pb2.py to unittest_import_public_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/text_format.py to text_format.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/type_pb2.py to type_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/message.py to message.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/symbol_database.py to symbol_database.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/service_reflection.py to service_reflection.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/any_pb2.py to any_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_mset_pb2.py to unittest_mset_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/empty_pb2.py to empty_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/proto_builder.py to proto_builder.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/unittest_proto3_arena_pb2.py to unittest_proto3_arena_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/source_context_pb2.py to source_context_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/service.py to service.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/message_set_extensions_pb2.py to message_set_extensions_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/text_encoding_test.py to text_encoding_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/text_format_test.py to text_format_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/packed_field_test_pb2.py to packed_field_test_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/encoder.py to encoder.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/service_reflection_test.py to service_reflection_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/testing_refleaks.py to testing_refleaks.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/generator_test.py to generator_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/no_package_pb2.py to no_package_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/file_options_test_pb2.py to file_options_test_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/test_bad_identifiers_pb2.py to test_bad_identifiers_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/missing_enum_values_pb2.py to missing_enum_values_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/descriptor_pool_test.py to descriptor_pool_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/proto_builder_test.py to proto_builder_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/wire_format.py to wire_format.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/wire_format_test.py to wire_format_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/message_factory_test.py to message_factory_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/factory_test2_pb2.py to factory_test2_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/more_extensions_dynamic_pb2.py to more_extensions_dynamic_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/symbol_database_test.py to symbol_database_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/api_implementation.py to api_implementation.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/json_format_test.py to json_format_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/descriptor_pool_test2_pb2.py to descriptor_pool_test2_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/_parameterized.py to _parameterized.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/decoder.py to decoder.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/any_test_pb2.py to any_test_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/enum_type_wrapper.py to enum_type_wrapper.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/descriptor_database_test.py to descriptor_database_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/__init__.py to __init__.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/test_util.py to test_util.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/descriptor_test.py to descriptor_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/more_messages_pb2.py to more_messages_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/python_message.py to python_message.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/containers.py to containers.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/type_checkers.py to type_checkers.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/factory_test1_pb2.py to factory_test1_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/well_known_types_test.py to well_known_types_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/descriptor_pool_test1_pb2.py to descriptor_pool_test1_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/message_test.py to message_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/message_listener.py to message_listener.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/reflection_test.py to reflection_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/unknown_fields_test.py to unknown_fields_test.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/more_extensions_pb2.py to more_extensions_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/well_known_types.py to well_known_types.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/import_test_package/outer_pb2.py to outer_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/import_test_package/inner_pb2.py to inner_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/import_test_package/__init__.py to __init__.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/compiler/plugin_pb2.py to plugin_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/compiler/__init__.py to __init__.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/pyext/python_pb2.py to python_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/pyext/__init__.py to __init__.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/pyext/cpp_message.py to cpp_message.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/util/json_format_proto3_pb2.py to json_format_proto3_pb2.cpython-35.pyc
+byte-compiling /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/util/__init__.py to __init__.cpython-35.pyc
+running install_egg_info
+running egg_info
+creating protobuf.egg-info
+writing top-level names to protobuf.egg-info/top_level.txt
+writing dependency_links to protobuf.egg-info/dependency_links.txt
+writing namespace_packages to protobuf.egg-info/namespace_packages.txt
+writing protobuf.egg-info/PKG-INFO
+writing requirements to protobuf.egg-info/requires.txt
+writing manifest file 'protobuf.egg-info/SOURCES.txt'
+reading manifest file 'protobuf.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files found matching 'google/protobuf/internal/*.proto'
+warning: no previously-included files matching '*_test.py' found under directory 'google'
+warning: no previously-included files matching '*_test.proto' found under directory 'google'
+warning: no previously-included files matching '*.dll' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '*.pyo' found anywhere in distribution
+warning: no previously-included files matching '*.so' found anywhere in distribution
+writing manifest file 'protobuf.egg-info/SOURCES.txt'
+Copying protobuf.egg-info to /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/protobuf-3.6.0-py3.5.egg-info
+Installing /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/protobuf-3.6.0-py3.5-nspkg.pth
+running install_scripts
+writing list of installed files to 'record.txt'
+commit 449e532b087e43a45ca6d8eae640a6019e547aca
+Merge: 15cde292c daf039b8c
+Author: Adam Cozzette <acozzette@gmail.com>
+Date:   Thu May 24 13:23:59 2018 -0700
+
+    Merge pull request #4673 from acozzette/memory-leak-fix
+    
+    Make sure to delete temporary maps used by FileDescriptorTables
+
+v3.6.0rc1
+
+HEAD detached at 449e532b0
+nothing to commit, working tree clean
+
+BUILD START: ['protobuf-3.6.0rc1-py35_0.tar.bz2']
+
+The following NEW packages will be INSTALLED:
+
+    ca-certificates: 2018.4.16-0              local
+    certifi:         2018.1.18-py35hd55c48c_0      
+    libprotobuf:     3.6.0rc1-0               local
+    ncurses:         6.1-0                    local
+    openssl:         1.0.2o-0                 local
+    pip:             9.0.1-py35_0                  
+    python:          3.5.4-0                       
+    readline:        6.3-0                    local
+    setuptools:      38.4.0-py35he1abd54_0         
+    six:             1.11.0-py35h1e4a097_0         
+    sqlite:          3.15.0-0                      
+    tk:              8.6.6-0                       
+    toolchain3-rpi3: 0.5-0                    gaiar
+    wheel:           0.30.0-py35haa2052f_0         
+    xz:              5.2.2-0                       
+    zlib:            1.2.11-0                 local
+
+checkout: '449e532b087e43a45ca6d8eae640a6019e547aca'
+==> git log -n1 <==
+
+==> git describe --tags --dirty <==
+
+==> git status <==
+
+source tree in: /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/work
+Packaging protobuf
+INFO:conda_build.build:Packaging protobuf
+Packaging protobuf-3.6.0rc1-py35_0
+INFO:conda_build.build:Packaging protobuf-3.6.0rc1-py35_0
+compiling .pyc files...
+number of files: 199
+Fixing permissions
+patchelf: file: /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/internal/_api_implementation.cpython-35m-arm-linux-gnueabihf.so
+    setting rpath to: $ORIGIN/../../../../..
+patchelf: file: /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.5/site-packages/google/protobuf/pyext/_message.cpython-35m-arm-linux-gnueabihf.so
+    setting rpath to: $ORIGIN/../../../../..
+WARNING (protobuf,_api_implementation.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libm.so.6 returned by pyldd. A CDT package?
+WARNING (protobuf,_api_implementation.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libpthread.so.0 returned by pyldd. A CDT package?
+WARNING (protobuf,_api_implementation.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libc.so.6 returned by pyldd. A CDT package?
+WARNING (protobuf,_api_implementation.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libgcc_s.so.1 returned by pyldd. A CDT package?
+   INFO (protobuf,_api_implementation.cpython-35m-arm-linux-gnueabihf.so): Needed DSO lib/libpython3.5m.so.1.0 in _api_implementation.cpython-35m-arm-linux-gnueabihf.so found in defaults::python-3.5.4-0
+WARNING (protobuf,_api_implementation.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libstdc++.so.6 returned by pyldd. A CDT package?
+WARNING (protobuf,_message.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libm.so.6 returned by pyldd. A CDT package?
+   INFO (protobuf,_message.cpython-35m-arm-linux-gnueabihf.so): Needed DSO lib/libprotobuf.so.16 in _message.cpython-35m-arm-linux-gnueabihf.so found in local::libprotobuf-3.6.0rc1-0
+WARNING (protobuf,_message.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libpthread.so.0 returned by pyldd. A CDT package?
+WARNING (protobuf,_message.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libc.so.6 returned by pyldd. A CDT package?
+WARNING (protobuf,_message.cpython-35m-arm-linux-gnueabihf.so): $RPATH/ld-linux-armhf.so.3 returned by pyldd. A CDT package?
+   INFO (protobuf,_message.cpython-35m-arm-linux-gnueabihf.so): Needed DSO lib/libpython3.5m.so.1.0 in _message.cpython-35m-arm-linux-gnueabihf.so found in defaults::python-3.5.4-0
+WARNING (protobuf,_message.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libgcc_s.so.1 returned by pyldd. A CDT package?
+WARNING (protobuf,_message.cpython-35m-arm-linux-gnueabihf.so): $RPATH/libstdc++.so.6 returned by pyldd. A CDT package?
+Fixing permissions
+Detected hard-coded path in binary file lib/python3.5/site-packages/google/protobuf/internal/_api_implementation.cpython-35m-arm-linux-gnueabihf.so
+Detected hard-coded path in binary file lib/python3.5/site-packages/google/protobuf/pyext/_message.cpython-35m-arm-linux-gnueabihf.so
+updating: protobuf-3.6.0rc1-py35_0.tar.bz2
+TEST START: /home/gaiar/berryconda3/conda-bld/linux-armv7l/protobuf-3.6.0rc1-py35_0.tar.bz2
+Updating index at /home/gaiar/berryconda3/conda-bld/linux-armv7l to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/gaiar/berryconda3/conda-bld/linux-armv7l to make package installable with dependencies
+Updating index at /home/gaiar/berryconda3/conda-bld/noarch to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/gaiar/berryconda3/conda-bld/noarch to make package installable with dependencies
+Adding in variants from /tmp/tmp4ta5zoi1/info/recipe/conda_build_config.yaml
+INFO:conda_build.variants:Adding in variants from /tmp/tmp4ta5zoi1/info/recipe/conda_build_config.yaml
+import: 'google'
+import: 'google.protobuf'
+import: 'google.protobuf.internal'
+import: 'google.protobuf.pyext'
+import: 'google.protobuf.util'
+import: 'google.protobuf.compiler'
+import: 'google'
+import: 'google.protobuf'
+import: 'google.protobuf.compiler'
+import: 'google.protobuf.internal'
+import: 'google.protobuf.pyext'
+import: 'google.protobuf.util'
+import: 'google'
+import: 'google.protobuf'
+import: 'google.protobuf.compiler'
+import: 'google.protobuf.internal'
+import: 'google.protobuf.pyext'
+import: 'google.protobuf.util'
++ python -c 'from google.protobuf.internal import api_implementation; assert api_implementation.Type() == '\''cpp'\'''
++ conda inspect linkages -p /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol protobuf
+WARNING: pyldd disagrees with ldd/otool. This will not cause any
+WARNING: problems for this build, but please file a bug at:
+WARNING: https://github.com/conda/conda-build
+WARNING: and (if possible) attach file /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/internal/_api_implementation.cpython-35m-arm-linux-gnueabihf.so
+WARNING: 
+ldd/otool gives:
+('libpython3.5m.so.1.0', '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/internal/../../../../../libpython3.5m.so.1.0')
+('libstdc++.so.6', '/usr/lib/arm-linux-gnueabihf/libstdc++.so.6')
+('libm.so.6', '/lib/arm-linux-gnueabihf/libm.so.6')
+('libgcc_s.so.1', '/lib/arm-linux-gnueabihf/libgcc_s.so.1')
+('libpthread.so.0', '/lib/arm-linux-gnueabihf/libpthread.so.0')
+('libc.so.6', '/lib/arm-linux-gnueabihf/libc.so.6')
+('libdl.so.2', '/lib/arm-linux-gnueabihf/libdl.so.2')
+('libutil.so.1', '/lib/arm-linux-gnueabihf/libutil.so.1')
+pyldd gives:
+('libdl.so.2', '$RPATH/libdl.so.2')
+('libutil.so.1', '$RPATH/libutil.so.1')
+('libstdc++.so.6', '$RPATH/libstdc++.so.6')
+('libgcc_s.so.1', '$RPATH/libgcc_s.so.1')
+('libm.so.6', '$RPATH/libm.so.6')
+('libc.so.6', '$RPATH/libc.so.6')
+('libpython3.5m.so.1.0', '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/internal/../../../../../libpython3.5m.so.1.0')
+('libpthread.so.0', '$RPATH/libpthread.so.0')
+
+Diffs
+{('libm.so.6', '/lib/arm-linux-gnueabihf/libm.so.6'), ('libutil.so.1', '/lib/arm-linux-gnueabihf/libutil.so.1'), ('libdl.so.2', '/lib/arm-linux-gnueabihf/libdl.so.2'), ('libc.so.6', '/lib/arm-linux-gnueabihf/libc.so.6'), ('libstdc++.so.6', '/usr/lib/arm-linux-gnueabihf/libstdc++.so.6'), ('libpthread.so.0', '/lib/arm-linux-gnueabihf/libpthread.so.0'), ('libgcc_s.so.1', '/lib/arm-linux-gnueabihf/libgcc_s.so.1')}
+Diffs
+{('libutil.so.1', '$RPATH/libutil.so.1'), ('libc.so.6', '$RPATH/libc.so.6'), ('libgcc_s.so.1', '$RPATH/libgcc_s.so.1'), ('libm.so.6', '$RPATH/libm.so.6'), ('libdl.so.2', '$RPATH/libdl.so.2'), ('libpthread.so.0', '$RPATH/libpthread.so.0'), ('libstdc++.so.6', '$RPATH/libstdc++.so.6')}
+WARNING: pyldd disagrees with ldd/otool. This will not cause any
+WARNING: problems for this build, but please file a bug at:
+WARNING: https://github.com/conda/conda-build
+WARNING: and (if possible) attach file /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/pyext/_message.cpython-35m-arm-linux-gnueabihf.so
+WARNING: 
+ldd/otool gives:
+('libprotobuf.so.16', '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/pyext/../../../../../libprotobuf.so.16')
+('libpython3.5m.so.1.0', '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/pyext/../../../../../libpython3.5m.so.1.0')
+('libstdc++.so.6', '/usr/lib/arm-linux-gnueabihf/libstdc++.so.6')
+('libm.so.6', '/lib/arm-linux-gnueabihf/libm.so.6')
+('libgcc_s.so.1', '/lib/arm-linux-gnueabihf/libgcc_s.so.1')
+('libpthread.so.0', '/lib/arm-linux-gnueabihf/libpthread.so.0')
+('libc.so.6', '/lib/arm-linux-gnueabihf/libc.so.6')
+('libz.so.1', '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/pyext/../../../../.././libz.so.1')
+('libdl.so.2', '/lib/arm-linux-gnueabihf/libdl.so.2')
+('libutil.so.1', '/lib/arm-linux-gnueabihf/libutil.so.1')
+pyldd gives:
+('libdl.so.2', '$RPATH/libdl.so.2')
+('libz.so.1', '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/pyext/../../../../.././libz.so.1')
+('libutil.so.1', '$RPATH/libutil.so.1')
+('libstdc++.so.6', '$RPATH/libstdc++.so.6')
+('libpython3.5m.so.1.0', '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/pyext/../../../../../libpython3.5m.so.1.0')
+('libgcc_s.so.1', '$RPATH/libgcc_s.so.1')
+('libm.so.6', '$RPATH/libm.so.6')
+('libc.so.6', '$RPATH/libc.so.6')
+('ld-linux-armhf.so.3', '$RPATH/ld-linux-armhf.so.3')
+('libprotobuf.so.16', '/home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib/python3.5/site-packages/google/protobuf/pyext/../../../../../libprotobuf.so.16')
+('libpthread.so.0', '$RPATH/libpthread.so.0')
+
+Diffs
+{('libm.so.6', '/lib/arm-linux-gnueabihf/libm.so.6'), ('libutil.so.1', '/lib/arm-linux-gnueabihf/libutil.so.1'), ('libdl.so.2', '/lib/arm-linux-gnueabihf/libdl.so.2'), ('libc.so.6', '/lib/arm-linux-gnueabihf/libc.so.6'), ('libstdc++.so.6', '/usr/lib/arm-linux-gnueabihf/libstdc++.so.6'), ('libpthread.so.0', '/lib/arm-linux-gnueabihf/libpthread.so.0'), ('libgcc_s.so.1', '/lib/arm-linux-gnueabihf/libgcc_s.so.1')}
+Diffs
+{('libutil.so.1', '$RPATH/libutil.so.1'), ('libc.so.6', '$RPATH/libc.so.6'), ('ld-linux-armhf.so.3', '$RPATH/ld-linux-armhf.so.3'), ('libgcc_s.so.1', '$RPATH/libgcc_s.so.1'), ('libdl.so.2', '$RPATH/libdl.so.2'), ('libm.so.6', '$RPATH/libm.so.6'), ('libpthread.so.0', '$RPATH/libpthread.so.0'), ('libstdc++.so.6', '$RPATH/libstdc++.so.6')}
+protobuf
+--------
+
+libprotobuf-3.6.0rc1-0:
+    libprotobuf.so.16 (lib/libprotobuf.so.16)
+
+python-3.5.4-0:
+    libpython3.5m.so.1.0 (lib/libpython3.5m.so.1.0)
+
+zlib-1.2.11-0:
+    libz.so.1 (lib/libz.so.1)
+
+system:
+    libc.so.6 (/lib/arm-linux-gnueabihf/libc.so.6)
+    libdl.so.2 (/lib/arm-linux-gnueabihf/libdl.so.2)
+    libgcc_s.so.1 (/lib/arm-linux-gnueabihf/libgcc_s.so.1)
+    libm.so.6 (/lib/arm-linux-gnueabihf/libm.so.6)
+    libpthread.so.0 (/lib/arm-linux-gnueabihf/libpthread.so.0)
+    libstdc++.so.6 (/usr/lib/arm-linux-gnueabihf/libstdc++.so.6)
+    libutil.so.1 (/lib/arm-linux-gnueabihf/libutil.so.1)
+
+not found:
+
+
++ exit 0
+detecting package type ...
+conda
+extracting package attributes for upload ...
+done
+
+Uploading file gaiar/protobuf/3.6.0rc1/linux-armv7l/protobuf-3.6.0rc1-py35_0.tar.bz2 ... 
+Using Anaconda API: https://api.anaconda.org
+ uploaded 0 of 1565Kb: 0.00% ETA: 0.0 minutes uploaded 0 of 1565Kb: 0.00% ETA: 562.9 minutes uploaded 0 of 1565Kb: 0.01% ETA: 276.4 minutes uploaded 0 of 1565Kb: 0.01% ETA: 270.6 minutes uploaded 0 of 1565Kb: 0.01% ETA: 214.3 minutes uploaded 0 of 1565Kb: 0.01% ETA: 210.8 minutes uploaded 0 of 1565Kb: 0.01% ETA: 161.3 minutes uploaded 0 of 1565Kb: 0.01% ETA: 125.4 minutes uploaded 0 of 1565Kb: 0.01% ETA: 124.2 minutes uploaded 0 of 1565Kb: 0.01% ETA: 120.1 minutes uploaded 0 of 1565Kb: 0.01% ETA: 119.0 minutes uploaded 0 of 1565Kb: 0.02% ETA: 101.5 minutes uploaded 0 of 1565Kb: 0.02% ETA: 86.1 minutes uploaded 0 of 1565Kb: 0.02% ETA: 85.5 minutes uploaded 0 of 1565Kb: 0.02% ETA: 73.2 minutes uploaded 0 of 1565Kb: 0.02% ETA: 72.9 minutes uploaded 0 of 1565Kb: 0.02% ETA: 65.9 minutes uploaded 0 of 1565Kb: 0.03% ETA: 58.7 minutes uploaded 0 of 1565Kb: 0.03% ETA: 58.4 minutes uploaded 1 of 1565Kb: 0.13% ETA: 12.4 minutes uploaded 1 of 1565Kb: 0.13% ETA: 12.4 minutes uploaded 2 of 1565Kb: 0.13% ETA: 12.1 minutes uploaded 2 of 1565Kb: 0.13% ETA: 11.8 minutes uploaded 2 of 1565Kb: 0.13% ETA: 11.8 minutes uploaded 2 of 1565Kb: 0.13% ETA: 11.8 minutes uploaded 2 of 1565Kb: 0.13% ETA: 11.8 minutes uploaded 2 of 1565Kb: 0.13% ETA: 11.6 minutes uploaded 2 of 1565Kb: 0.14% ETA: 11.3 minutes uploaded 2 of 1565Kb: 0.14% ETA: 11.3 minutes uploaded 2 of 1565Kb: 0.14% ETA: 11.2 minutes uploaded 2 of 1565Kb: 0.14% ETA: 11.2 minutes uploaded 2 of 1565Kb: 0.14% ETA: 11.1 minutes uploaded 2 of 1565Kb: 0.15% ETA: 10.8 minutes uploaded 2 of 1565Kb: 0.15% ETA: 10.8 minutes uploaded 2 of 1565Kb: 0.15% ETA: 10.6 minutes uploaded 2 of 1565Kb: 0.15% ETA: 10.6 minutes uploaded 2 of 1565Kb: 0.15% ETA: 10.4 minutes uploaded 2 of 1565Kb: 0.15% ETA: 10.2 minutes uploaded 2 of 1565Kb: 0.15% ETA: 10.2 minutes uploaded 2 of 1565Kb: 0.16% ETA: 10.1 minutes uploaded 2 of 1565Kb: 0.16% ETA: 10.1 minutes uploaded 2 of 1565Kb: 0.16% ETA: 10.0 minutes uploaded 2 of 1565Kb: 0.16% ETA: 9.8 minutes uploaded 2 of 1565Kb: 0.16% ETA: 9.8 minutes uploaded 3 of 1565Kb: 0.20% ETA: 7.8 minutes uploaded 3 of 1565Kb: 0.20% ETA: 7.8 minutes uploaded 3 of 1565Kb: 0.20% ETA: 7.8 minutes uploaded 3 of 1565Kb: 0.21% ETA: 7.6 minutes uploaded 3 of 1565Kb: 0.21% ETA: 7.6 minutes uploaded 3 of 1565Kb: 0.21% ETA: 7.5 minutes uploaded 3 of 1565Kb: 0.21% ETA: 7.5 minutes uploaded 3 of 1565Kb: 0.21% ETA: 7.4 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.3 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.3 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.3 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.3 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.2 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.1 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.1 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.1 minutes uploaded 3 of 1565Kb: 0.22% ETA: 7.1 minutes uploaded 3 of 1565Kb: 0.23% ETA: 7.1 minutes uploaded 3 of 1565Kb: 0.23% ETA: 7.0 minutes uploaded 3 of 1565Kb: 0.23% ETA: 7.0 minutes uploaded 3 of 1565Kb: 0.23% ETA: 6.9 minutes uploaded 3 of 1565Kb: 0.23% ETA: 6.9 minutes uploaded 3 of 1565Kb: 0.23% ETA: 6.9 minutes uploaded 3 of 1565Kb: 0.24% ETA: 6.7 minutes uploaded 3 of 1565Kb: 0.24% ETA: 6.6 minutes uploaded 11 of 1565Kb: 0.75% ETA: 2.1 minutes uploaded 19 of 1565Kb: 1.27% ETA: 1.3 minutes uploaded 27 of 1565Kb: 1.78% ETA: 0.9 minutes uploaded 35 of 1565Kb: 2.29% ETA: 0.7 minutes uploaded 43 of 1565Kb: 2.80% ETA: 0.6 minutes uploaded 51 of 1565Kb: 3.31% ETA: 0.5 minutes uploaded 59 of 1565Kb: 3.82% ETA: 0.4 minutes uploaded 67 of 1565Kb: 4.33% ETA: 0.4 minutes uploaded 75 of 1565Kb: 4.84% ETA: 0.3 minutes uploaded 83 of 1565Kb: 5.35% ETA: 0.3 minutes uploaded 91 of 1565Kb: 5.87% ETA: 0.3 minutes uploaded 99 of 1565Kb: 6.38% ETA: 0.3 minutes uploaded 107 of 1565Kb: 6.89% ETA: 0.2 minutes uploaded 115 of 1565Kb: 7.40% ETA: 0.2 minutes uploaded 123 of 1565Kb: 7.91% ETA: 0.2 minutes uploaded 131 of 1565Kb: 8.42% ETA: 0.2 minutes uploaded 139 of 1565Kb: 8.93% ETA: 0.2 minutes uploaded 147 of 1565Kb: 9.44% ETA: 0.2 minutes uploaded 155 of 1565Kb: 9.95% ETA: 0.2 minutes uploaded 163 of 1565Kb: 10.47% ETA: 0.2 minutes uploaded 171 of 1565Kb: 10.98% ETA: 0.2 minutes uploaded 179 of 1565Kb: 11.49% ETA: 0.2 minutes uploaded 187 of 1565Kb: 12.00% ETA: 0.1 minutes uploaded 195 of 1565Kb: 12.51% ETA: 0.1 minutes uploaded 203 of 1565Kb: 13.02% ETA: 0.1 minutes uploaded 211 of 1565Kb: 13.53% ETA: 0.1 minutes uploaded 219 of 1565Kb: 14.04% ETA: 0.1 minutes uploaded 227 of 1565Kb: 14.55% ETA: 0.1 minutes uploaded 235 of 1565Kb: 15.07% ETA: 0.1 minutes uploaded 243 of 1565Kb: 15.58% ETA: 0.1 minutes uploaded 251 of 1565Kb: 16.09% ETA: 0.1 minutes uploaded 259 of 1565Kb: 16.60% ETA: 0.1 minutes uploaded 267 of 1565Kb: 17.11% ETA: 0.1 minutes uploaded 275 of 1565Kb: 17.62% ETA: 0.1 minutes uploaded 283 of 1565Kb: 18.13% ETA: 0.1 minutes uploaded 291 of 1565Kb: 18.64% ETA: 0.1 minutes uploaded 299 of 1565Kb: 19.15% ETA: 0.1 minutes uploaded 307 of 1565Kb: 19.67% ETA: 0.1 minutes uploaded 315 of 1565Kb: 20.18% ETA: 0.1 minutes uploaded 323 of 1565Kb: 20.69% ETA: 0.1 minutes uploaded 331 of 1565Kb: 21.20% ETA: 0.1 minutes uploaded 339 of 1565Kb: 21.71% ETA: 0.1 minutes uploaded 347 of 1565Kb: 22.22% ETA: 0.1 minutes uploaded 355 of 1565Kb: 22.73% ETA: 0.1 minutes uploaded 363 of 1565Kb: 23.24% ETA: 0.1 minutes uploaded 371 of 1565Kb: 23.75% ETA: 0.1 minutes uploaded 379 of 1565Kb: 24.27% ETA: 0.1 minutes uploaded 387 of 1565Kb: 24.78% ETA: 0.1 minutes uploaded 395 of 1565Kb: 25.29% ETA: 0.1 minutes uploaded 403 of 1565Kb: 25.80% ETA: 0.1 minutes uploaded 411 of 1565Kb: 26.31% ETA: 0.1 minutes uploaded 419 of 1565Kb: 26.82% ETA: 0.1 minutes uploaded 427 of 1565Kb: 27.33% ETA: 0.1 minutes uploaded 435 of 1565Kb: 27.84% ETA: 0.1 minutes uploaded 443 of 1565Kb: 28.35% ETA: 0.1 minutes uploaded 451 of 1565Kb: 28.87% ETA: 0.1 minutes uploaded 459 of 1565Kb: 29.38% ETA: 0.1 minutes uploaded 467 of 1565Kb: 29.89% ETA: 0.1 minutes uploaded 475 of 1565Kb: 30.40% ETA: 0.1 minutes uploaded 483 of 1565Kb: 30.91% ETA: 0.1 minutes uploaded 491 of 1565Kb: 31.42% ETA: 0.0 minutes uploaded 499 of 1565Kb: 31.93% ETA: 0.0 minutes uploaded 507 of 1565Kb: 32.44% ETA: 0.0 minutes uploaded 515 of 1565Kb: 32.96% ETA: 0.0 minutes uploaded 523 of 1565Kb: 33.47% ETA: 0.0 minutes uploaded 531 of 1565Kb: 33.98% ETA: 0.0 minutes uploaded 539 of 1565Kb: 34.49% ETA: 0.0 minutes uploaded 547 of 1565Kb: 35.00% ETA: 0.0 minutes uploaded 555 of 1565Kb: 35.51% ETA: 0.0 minutes uploaded 563 of 1565Kb: 36.02% ETA: 0.0 minutes uploaded 571 of 1565Kb: 36.53% ETA: 0.0 minutes uploaded 579 of 1565Kb: 37.04% ETA: 0.0 minutes uploaded 587 of 1565Kb: 37.56% ETA: 0.0 minutes uploaded 595 of 1565Kb: 38.07% ETA: 0.0 minutes uploaded 603 of 1565Kb: 38.58% ETA: 0.0 minutes uploaded 611 of 1565Kb: 39.09% ETA: 0.0 minutes uploaded 619 of 1565Kb: 39.60% ETA: 0.0 minutes uploaded 627 of 1565Kb: 40.11% ETA: 0.0 minutes uploaded 635 of 1565Kb: 40.62% ETA: 0.0 minutes uploaded 643 of 1565Kb: 41.13% ETA: 0.0 minutes uploaded 651 of 1565Kb: 41.64% ETA: 0.0 minutes uploaded 659 of 1565Kb: 42.16% ETA: 0.0 minutes uploaded 667 of 1565Kb: 42.67% ETA: 0.0 minutes uploaded 675 of 1565Kb: 43.18% ETA: 0.0 minutes uploaded 683 of 1565Kb: 43.69% ETA: 0.0 minutes uploaded 691 of 1565Kb: 44.20% ETA: 0.0 minutes uploaded 699 of 1565Kb: 44.71% ETA: 0.0 minutes uploaded 707 of 1565Kb: 45.22% ETA: 0.0 minutes uploaded 715 of 1565Kb: 45.73% ETA: 0.0 minutes uploaded 723 of 1565Kb: 46.24% ETA: 0.0 minutes uploaded 731 of 1565Kb: 46.76% ETA: 0.0 minutes uploaded 739 of 1565Kb: 47.27% ETA: 0.0 minutes uploaded 747 of 1565Kb: 47.78% ETA: 0.0 minutes uploaded 755 of 1565Kb: 48.29% ETA: 0.0 minutes uploaded 763 of 1565Kb: 48.80% ETA: 0.0 minutes uploaded 771 of 1565Kb: 49.31% ETA: 0.0 minutes uploaded 779 of 1565Kb: 49.82% ETA: 0.0 minutes uploaded 787 of 1565Kb: 50.33% ETA: 0.0 minutes uploaded 795 of 1565Kb: 50.84% ETA: 0.0 minutes uploaded 803 of 1565Kb: 51.36% ETA: 0.0 minutes uploaded 811 of 1565Kb: 51.87% ETA: 0.0 minutes uploaded 819 of 1565Kb: 52.38% ETA: 0.0 minutes uploaded 827 of 1565Kb: 52.89% ETA: 0.0 minutes uploaded 835 of 1565Kb: 53.40% ETA: 0.0 minutes uploaded 843 of 1565Kb: 53.91% ETA: 0.0 minutes uploaded 851 of 1565Kb: 54.42% ETA: 0.0 minutes uploaded 859 of 1565Kb: 54.93% ETA: 0.0 minutes uploaded 867 of 1565Kb: 55.44% ETA: 0.0 minutes uploaded 875 of 1565Kb: 55.96% ETA: 0.0 minutes uploaded 883 of 1565Kb: 56.47% ETA: 0.0 minutes uploaded 891 of 1565Kb: 56.98% ETA: 0.0 minutes uploaded 899 of 1565Kb: 57.49% ETA: 0.0 minutes uploaded 907 of 1565Kb: 58.00% ETA: 0.0 minutes uploaded 915 of 1565Kb: 58.51% ETA: 0.0 minutes uploaded 923 of 1565Kb: 59.02% ETA: 0.0 minutes uploaded 931 of 1565Kb: 59.53% ETA: 0.0 minutes uploaded 939 of 1565Kb: 60.04% ETA: 0.0 minutes uploaded 947 of 1565Kb: 60.56% ETA: 0.0 minutes uploaded 955 of 1565Kb: 61.07% ETA: 0.0 minutes uploaded 963 of 1565Kb: 61.58% ETA: 0.0 minutes uploaded 971 of 1565Kb: 62.09% ETA: 0.0 minutes uploaded 979 of 1565Kb: 62.60% ETA: 0.0 minutes uploaded 987 of 1565Kb: 63.11% ETA: 0.0 minutes uploaded 995 of 1565Kb: 63.62% ETA: 0.0 minutes uploaded 1003 of 1565Kb: 64.13% ETA: 0.0 minutes uploaded 1011 of 1565Kb: 64.64% ETA: 0.0 minutes uploaded 1019 of 1565Kb: 65.16% ETA: 0.0 minutes uploaded 1027 of 1565Kb: 65.67% ETA: 0.0 minutes uploaded 1035 of 1565Kb: 66.18% ETA: 0.0 minutes uploaded 1043 of 1565Kb: 66.69% ETA: 0.0 minutes uploaded 1051 of 1565Kb: 67.20% ETA: 0.0 minutes uploaded 1059 of 1565Kb: 67.71% ETA: 0.0 minutes uploaded 1067 of 1565Kb: 68.22% ETA: 0.0 minutes uploaded 1075 of 1565Kb: 68.73% ETA: 0.0 minutes uploaded 1083 of 1565Kb: 69.25% ETA: 0.0 minutes uploaded 1091 of 1565Kb: 69.76% ETA: 0.0 minutes uploaded 1099 of 1565Kb: 70.27% ETA: 0.0 minutes uploaded 1107 of 1565Kb: 70.78% ETA: 0.0 minutes uploaded 1115 of 1565Kb: 71.29% ETA: 0.0 minutes uploaded 1123 of 1565Kb: 71.80% ETA: 0.0 minutes uploaded 1131 of 1565Kb: 72.31% ETA: 0.0 minutes uploaded 1139 of 1565Kb: 72.82% ETA: 0.0 minutes uploaded 1147 of 1565Kb: 73.33% ETA: 0.0 minutes uploaded 1155 of 1565Kb: 73.85% ETA: 0.0 minutes uploaded 1163 of 1565Kb: 74.36% ETA: 0.0 minutes uploaded 1171 of 1565Kb: 74.87% ETA: 0.0 minutes uploaded 1179 of 1565Kb: 75.38% ETA: 0.0 minutes uploaded 1187 of 1565Kb: 75.89% ETA: 0.0 minutes uploaded 1195 of 1565Kb: 76.40% ETA: 0.0 minutes uploaded 1203 of 1565Kb: 76.91% ETA: 0.0 minutes uploaded 1211 of 1565Kb: 77.42% ETA: 0.0 minutes uploaded 1219 of 1565Kb: 77.93% ETA: 0.0 minutes uploaded 1227 of 1565Kb: 78.45% ETA: 0.0 minutes uploaded 1235 of 1565Kb: 78.96% ETA: 0.0 minutes uploaded 1243 of 1565Kb: 79.47% ETA: 0.0 minutes uploaded 1251 of 1565Kb: 79.98% ETA: 0.0 minutes uploaded 1259 of 1565Kb: 80.49% ETA: 0.0 minutes uploaded 1267 of 1565Kb: 81.00% ETA: 0.0 minutes uploaded 1275 of 1565Kb: 81.51% ETA: 0.0 minutes uploaded 1283 of 1565Kb: 82.02% ETA: 0.0 minutes uploaded 1291 of 1565Kb: 82.53% ETA: 0.0 minutes uploaded 1299 of 1565Kb: 83.05% ETA: 0.0 minutes uploaded 1307 of 1565Kb: 83.56% ETA: 0.0 minutes uploaded 1315 of 1565Kb: 84.07% ETA: 0.0 minutes uploaded 1323 of 1565Kb: 84.58% ETA: 0.0 minutes uploaded 1331 of 1565Kb: 85.09% ETA: 0.0 minutes uploaded 1339 of 1565Kb: 85.60% ETA: 0.0 minutes uploaded 1347 of 1565Kb: 86.11% ETA: 0.0 minutes uploaded 1355 of 1565Kb: 86.62% ETA: 0.0 minutes uploaded 1363 of 1565Kb: 87.13% ETA: 0.0 minutes uploaded 1371 of 1565Kb: 87.65% ETA: 0.0 minutes uploaded 1379 of 1565Kb: 88.16% ETA: 0.0 minutes uploaded 1387 of 1565Kb: 88.67% ETA: 0.0 minutes uploaded 1395 of 1565Kb: 89.18% ETA: 0.0 minutes uploaded 1403 of 1565Kb: 89.69% ETA: 0.0 minutes uploaded 1411 of 1565Kb: 90.20% ETA: 0.0 minutes uploaded 1419 of 1565Kb: 90.71% ETA: 0.0 minutes uploaded 1427 of 1565Kb: 91.22% ETA: 0.0 minutes uploaded 1435 of 1565Kb: 91.73% ETA: 0.0 minutes uploaded 1443 of 1565Kb: 92.25% ETA: 0.0 minutes uploaded 1451 of 1565Kb: 92.76% ETA: 0.0 minutes uploaded 1459 of 1565Kb: 93.27% ETA: 0.0 minutes uploaded 1467 of 1565Kb: 93.78% ETA: 0.0 minutes uploaded 1475 of 1565Kb: 94.29% ETA: 0.0 minutes uploaded 1483 of 1565Kb: 94.80% ETA: 0.0 minutes uploaded 1491 of 1565Kb: 95.31% ETA: 0.0 minutes uploaded 1499 of 1565Kb: 95.82% ETA: 0.0 minutes uploaded 1507 of 1565Kb: 96.33% ETA: 0.0 minutes uploaded 1515 of 1565Kb: 96.85% ETA: 0.0 minutes uploaded 1523 of 1565Kb: 97.36% ETA: 0.0 minutes uploaded 1531 of 1565Kb: 97.87% ETA: 0.0 minutes uploaded 1539 of 1565Kb: 98.38% ETA: 0.0 minutes uploaded 1547 of 1565Kb: 98.89% ETA: 0.0 minutes uploaded 1555 of 1565Kb: 99.40% ETA: 0.0 minutes uploaded 1563 of 1565Kb: 99.91% ETA: 0.0 minutes uploaded 1565 of 1565Kb: 100.00% ETA: 0.0 minutes uploaded 1565 of 1565Kb: 100.00% ETA: 0.0 minutes uploaded 1565 of 1565Kb: 100.00% ETA: 0.0 minutes
+
+Upload(s) Complete
+
+Package located at:
+https://anaconda.org/gaiar/protobuf
+
+
+Renaming work directory,  /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/work  to  /home/gaiar/berryconda3/conda-bld/protobuf_1527622122505/work_moved_protobuf-3.6.0rc1-py35_0_linux-armv7l
+
+The following NEW packages will be INSTALLED:
+
+    ca-certificates: 2018.4.16-0              local
+    certifi:         2018.1.18-py35hd55c48c_0      
+    libprotobuf:     3.6.0rc1-0               local
+    ncurses:         6.1-0                    local
+    openssl:         1.0.2o-0                 local
+    pip:             9.0.1-py35_0                  
+    protobuf:        3.6.0rc1-py35_0          local
+    python:          3.5.4-0                       
+    readline:        6.3-0                    local
+    setuptools:      38.4.0-py35he1abd54_0         
+    six:             1.11.0-py35h1e4a097_0         
+    sqlite:          3.15.0-0                      
+    tk:              8.6.6-0                       
+    wheel:           0.30.0-py35haa2052f_0         
+    xz:              5.2.2-0                       
+    zlib:            1.2.11-0                 local
+
+TEST END: /home/gaiar/berryconda3/conda-bld/linux-armv7l/protobuf-3.6.0rc1-py35_0.tar.bz2
+Uploading protobuf-3.6.0rc1-py35_0.tar.bz2 to anaconda.org
+
+
+
+####################################################################################
+Source and build intermediates have been left in /home/gaiar/berryconda3/conda-bld.
+There are currently 20 accumulated.
+To remove them, you can run the ```conda build purge``` command

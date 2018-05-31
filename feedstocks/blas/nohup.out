@@ -1,0 +1,47 @@
+Adding in variants from internal_defaults
+INFO:conda_build.variants:Adding in variants from internal_defaults
+Attempting to finalize metadata for blas
+INFO:conda_build.metadata:Attempting to finalize metadata for blas
+BUILD START: ['blas-1.1-openblas.tar.bz2']
+source tree in: /home/gaiar/berryconda3/conda-bld/blas_1527154916406/work
+Packaging blas
+INFO:conda_build.build:Packaging blas
+Packaging blas-1.1-openblas
+INFO:conda_build.build:Packaging blas-1.1-openblas
+No files or script found for output blas
+WARNING:conda_build.build:No files or script found for output blas
+number of files: 0
+Fixing permissions
+Fixing permissions
+updating: blas-1.1-openblas.tar.bz2
+TEST START: /home/gaiar/berryconda3/conda-bld/linux-armv7l/blas-1.1-openblas.tar.bz2
+Updating index at /home/gaiar/berryconda3/conda-bld/linux-armv7l to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/gaiar/berryconda3/conda-bld/linux-armv7l to make package installable with dependencies
+Updating index at /home/gaiar/berryconda3/conda-bld/noarch to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/gaiar/berryconda3/conda-bld/noarch to make package installable with dependencies
+Adding in variants from /tmp/tmp7w4i5f6i/info/recipe/conda_build_config.yaml
+INFO:conda_build.variants:Adding in variants from /tmp/tmp7w4i5f6i/info/recipe/conda_build_config.yaml
+detecting package type ...
+conda
+extracting package attributes for upload ...
+done
+
+Uploading file gaiar/blas/1.1/linux-armv7l/blas-1.1-openblas.tar.bz2 ... 
+Using Anaconda API: https://api.anaconda.org
+ uploaded 0 of 6Kb: 0.00% ETA: 0.0 minutes uploaded 0 of 6Kb: 0.57% ETA: 2.3 minutes uploaded 0 of 6Kb: 1.41% ETA: 0.9 minutes uploaded 0 of 6Kb: 1.44% ETA: 0.9 minutes uploaded 0 of 6Kb: 1.82% ETA: 0.7 minutes uploaded 0 of 6Kb: 1.86% ETA: 0.7 minutes uploaded 0 of 6Kb: 2.43% ETA: 0.5 minutes uploaded 0 of 6Kb: 3.13% ETA: 0.4 minutes uploaded 0 of 6Kb: 3.16% ETA: 0.4 minutes uploaded 0 of 6Kb: 3.27% ETA: 0.4 minutes uploaded 0 of 6Kb: 3.30% ETA: 0.4 minutes uploaded 0 of 6Kb: 3.87% ETA: 0.3 minutes uploaded 0 of 6Kb: 4.57% ETA: 0.3 minutes uploaded 0 of 6Kb: 4.60% ETA: 0.3 minutes uploaded 0 of 6Kb: 5.38% ETA: 0.2 minutes uploaded 0 of 6Kb: 5.41% ETA: 0.2 minutes uploaded 0 of 6Kb: 5.98% ETA: 0.2 minutes uploaded 0 of 6Kb: 6.73% ETA: 0.2 minutes uploaded 0 of 6Kb: 6.76% ETA: 0.2 minutes uploaded 1 of 6Kb: 31.70% ETA: 0.0 minutes uploaded 1 of 6Kb: 31.74% ETA: 0.0 minutes uploaded 1 of 6Kb: 32.31% ETA: 0.0 minutes uploaded 2 of 6Kb: 33.29% ETA: 0.0 minutes uploaded 2 of 6Kb: 33.32% ETA: 0.0 minutes uploaded 2 of 6Kb: 33.37% ETA: 0.0 minutes uploaded 2 of 6Kb: 33.40% ETA: 0.0 minutes uploaded 2 of 6Kb: 33.97% ETA: 0.0 minutes uploaded 2 of 6Kb: 34.86% ETA: 0.0 minutes uploaded 2 of 6Kb: 34.89% ETA: 0.0 minutes uploaded 2 of 6Kb: 35.15% ETA: 0.0 minutes uploaded 2 of 6Kb: 35.18% ETA: 0.0 minutes uploaded 2 of 6Kb: 35.75% ETA: 0.0 minutes uploaded 2 of 6Kb: 36.66% ETA: 0.0 minutes uploaded 2 of 6Kb: 36.69% ETA: 0.0 minutes uploaded 2 of 6Kb: 37.56% ETA: 0.0 minutes uploaded 2 of 6Kb: 37.59% ETA: 0.0 minutes uploaded 2 of 6Kb: 38.16% ETA: 0.0 minutes uploaded 2 of 6Kb: 38.97% ETA: 0.0 minutes uploaded 2 of 6Kb: 39.00% ETA: 0.0 minutes uploaded 2 of 6Kb: 39.26% ETA: 0.0 minutes uploaded 2 of 6Kb: 39.29% ETA: 0.0 minutes uploaded 2 of 6Kb: 39.86% ETA: 0.0 minutes uploaded 2 of 6Kb: 40.83% ETA: 0.0 minutes uploaded 2 of 6Kb: 40.86% ETA: 0.0 minutes uploaded 3 of 6Kb: 50.83% ETA: 0.0 minutes uploaded 3 of 6Kb: 50.86% ETA: 0.0 minutes uploaded 3 of 6Kb: 51.43% ETA: 0.0 minutes uploaded 3 of 6Kb: 52.32% ETA: 0.0 minutes uploaded 3 of 6Kb: 52.35% ETA: 0.0 minutes uploaded 3 of 6Kb: 53.36% ETA: 0.0 minutes uploaded 3 of 6Kb: 53.40% ETA: 0.0 minutes uploaded 3 of 6Kb: 53.97% ETA: 0.0 minutes uploaded 3 of 6Kb: 54.92% ETA: 0.0 minutes uploaded 3 of 6Kb: 54.95% ETA: 0.0 minutes uploaded 3 of 6Kb: 55.08% ETA: 0.0 minutes uploaded 3 of 6Kb: 55.11% ETA: 0.0 minutes uploaded 3 of 6Kb: 55.68% ETA: 0.0 minutes uploaded 3 of 6Kb: 56.55% ETA: 0.0 minutes uploaded 3 of 6Kb: 56.59% ETA: 0.0 minutes uploaded 3 of 6Kb: 56.65% ETA: 0.0 minutes uploaded 3 of 6Kb: 56.68% ETA: 0.0 minutes uploaded 3 of 6Kb: 57.25% ETA: 0.0 minutes uploaded 3 of 6Kb: 58.08% ETA: 0.0 minutes uploaded 3 of 6Kb: 58.11% ETA: 0.0 minutes uploaded 3 of 6Kb: 58.51% ETA: 0.0 minutes uploaded 3 of 6Kb: 58.54% ETA: 0.0 minutes uploaded 3 of 6Kb: 59.11% ETA: 0.0 minutes uploaded 3 of 6Kb: 60.63% ETA: 0.0 minutes uploaded 3 of 6Kb: 61.19% ETA: 0.0 minutes uploaded 6 of 6Kb: 99.37% ETA: 0.0 minutes uploaded 6 of 6Kb: 99.40% ETA: 0.0 minutes uploaded 6 of 6Kb: 100.00% ETA: 0.0 minutes
+
+Upload(s) Complete
+
+Package located at:
+https://anaconda.org/gaiar/blas
+
+
+Nothing to test for: /home/gaiar/berryconda3/conda-bld/linux-armv7l/blas-1.1-openblas.tar.bz2
+Uploading blas-1.1-openblas.tar.bz2 to anaconda.org
+
+
+
+####################################################################################
+Source and build intermediates have been left in /home/gaiar/berryconda3/conda-bld.
+There are currently 36 accumulated.
+To remove them, you can run the ```conda build purge``` command

@@ -1,0 +1,60 @@
+{% set name = "botocore" %}
+{% set version = "1.10.26" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "ca23fb013a18584a3a7043c6cc0bf02250f2665937e73290f65f1f48ee9b4f78" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  {{ hash_type }}: {{ hash }}
+
+build:
+  noarch: python
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  build:
+    - python
+    - pip
+
+  run:
+    - python
+    - jmespath >=0.7.1,<1.0.0
+    - python-dateutil >=2.1,<3.0.0
+    - docutils >=0.10
+
+test:
+  imports:
+    - botocore
+    - botocore.docs
+    - botocore.docs.bcdoc
+    - botocore.vendored
+    - botocore.vendored.requests
+    - botocore.vendored.requests.packages
+    - botocore.vendored.requests.packages.chardet
+    - botocore.vendored.requests.packages.urllib3
+    - botocore.vendored.requests.packages.urllib3.contrib
+    - botocore.vendored.requests.packages.urllib3.packages
+    - botocore.vendored.requests.packages.urllib3.packages.ssl_match_hostname
+    - botocore.vendored.requests.packages.urllib3.util
+
+about:
+  home: https://github.com/boto/botocore
+  license_file: LICENSE.txt
+  license: Apache 2.0
+  license_family: Apache
+  summary: 'Low-level, data-driven core of boto 3.'
+  dev_url: https://github.com/boto/botocore
+  doc_url: https://botocore.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - hajapy
+    - tkelman

@@ -1,0 +1,60 @@
+{% set version = "3.1.4" %}
+
+package:
+  name: conda-smithy
+  version: {{ version }}
+
+source:
+  url: https://github.com/conda-forge/conda-smithy/releases/download/v{{ version }}/conda-smithy-{{ version }}.tar.gz
+  sha256: e8683625be67504dcc00f02c04934cf9106cccfbc13aaad302e8e1192d2f8a25
+
+build:
+  number: 0
+  noarch: python
+  script:
+    - python -m pip install --no-deps --ignore-installed .
+    - rm -f "${PREFIX}/bin/conda"           # [not win]
+    - del /f /q "%PREFIX%\\Scripts\\conda"  # [win]
+  entry_points:
+    - feedstocks = conda_smithy.feedstocks:main
+    - conda-smithy = conda_smithy.cli:main
+
+requirements:
+  build:
+    - python
+    - pip
+    - setuptools
+  run:
+    - python
+    - conda >=4.2
+    - conda-build >=3.8.1
+    - jinja2
+    - requests
+    - pycrypto
+    - gitpython
+    - pygithub <2
+    - ruamel.yaml
+    - conda-forge-pinning
+
+test:
+  imports:
+    - conda_smithy
+    - conda_smithy.ci_register
+    - conda_smithy.configure_feedstock
+  commands:
+    - conda smithy --help
+
+about:
+  home: https://github.com/conda-forge/conda-smithy
+  license: BSD 3-clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: The tool for managing conda-forge feedstocks
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - pelson
+    - ocefpaf
+    - isuruf
+    - scopatz
