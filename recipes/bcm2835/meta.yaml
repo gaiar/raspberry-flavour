@@ -16,7 +16,6 @@ build:
 
 requirements:
   build:
-    - toolchain3-rpi3
     - make 
 
 extra:

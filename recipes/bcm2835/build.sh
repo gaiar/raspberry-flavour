@@ -1,10 +1,5 @@
 #!/bin/bash
 
-CFLAGS="-march=native -mtune=native"
-
-export CFLAGS
-export CXXFLAGS="${CFLAGS}"
-
 chmod +x configure
 ./configure --prefix=${PREFIX}
 
