@@ -1,0 +1,24 @@
+{% set version = "1.55" %}
+
+package:
+  name: bcm2835
+  version: "1.55"
+
+source:
+  url: http://www.airspayce.com/mikem/bcm2835/bcm2835-{{ version }}.tar.gz 
+  fn: bcm2835-{{ version }}.tar.gz 
+  #md5: d3190649b26572d44cd1e4f553943b31
+
+
+build:
+  number: 0
+  skip: true         # [win]
+
+requirements:
+  build:
+    - toolchain3-rpi3
+    - make 
+
+extra:
+  recipe-maintainers:
+    - gaiar
