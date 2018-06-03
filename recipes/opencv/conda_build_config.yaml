@@ -1,0 +1,6 @@
+c_compiler: gcc
+cpu_optimization_target: native
+cxx_compiler: gxx
+fortran_compiler: gfortran
+ignore_build_only_deps: [python]
+target_platform: linux-armv7l

@@ -1,0 +1,53 @@
+# This file created by conda-build 3.0.30
+# meta.yaml template originally from:
+# /root/raspberrypi-conda-recipes/recipes/opencv3, last modified Thu Nov 30 09:25:08 2017
+# ------------------------------------------------
+
+package:
+    name: opencv-simd-turbojpeg-tbb
+    version: 3.3.0
+source:
+    fn: opencv-3.3.0.tar.gz
+    sha256: 8bb312b9d9fd17336dc1f8b3ac82f021ca50e2034afc866098866176d985adc6
+    url: https://github.com/opencv/opencv/archive/3.3.0.tar.gz
+build:
+    number: '1'
+requirements:
+    build:
+        - wheel 
+        - libtiff 
+        - zlib 
+        - pip 
+        - python >=3.5
+        - ca-certificates 
+        - setuptools
+        - ncurses 
+        - openssl 
+        - readline 
+        - sqlite 
+        - tk 
+        - libpng 
+        - numpy 
+        - libjpeg-turbo 
+        - certifi 
+        - xz 
+        - jasper 
+        - jpeg
+    run:
+        - zlib 
+        - numpy >=1.9
+        - libjpeg-turbo
+        - libpng 
+        - python 
+        - jasper
+        - libtiff 
+test:
+    imports:
+        - cv2
+about:
+    home: http://opencv.org/
+    license: BSD 3-clause
+    summary: Computer vision and machine learning software library.
+extra:
+    copy_test_source_files: true
+    final: true
