@@ -17,7 +17,6 @@ build:
 
 requirements:
   build:
-    - {{ compiler("c") }}
     - pkg-config  # [not win]
     - libtool  # [not win]
     - nasm  # [not win]
