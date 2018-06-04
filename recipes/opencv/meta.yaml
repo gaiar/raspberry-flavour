@@ -1,53 +1,118 @@
-# This file created by conda-build 3.0.30
-# meta.yaml template originally from:
-# /root/raspberrypi-conda-recipes/recipes/opencv3, last modified Thu Nov 30 09:25:08 2017
-# ------------------------------------------------
+{% set version = "3.4.1" %}
+{% set blas_variant = "openblas" %}
 
 package:
-    name: opencv-simd-turbojpeg-tbb
-    version: 3.3.0
+  name: opencv
+  version: {{ version }}
+
 source:
-    fn: opencv-3.3.0.tar.gz
-    sha256: 8bb312b9d9fd17336dc1f8b3ac82f021ca50e2034afc866098866176d985adc6
-    url: https://github.com/opencv/opencv/archive/3.3.0.tar.gz
+  git_url: https://github.com/opencv/opencv.git
+  git_rev: {{ version }}
 build:
-    number: '1'
+  number: 0
+
 requirements:
-    build:
-        - wheel 
-        - libtiff 
-        - zlib 
-        - pip 
-        - python >=3.5
-        - ca-certificates 
-        - setuptools
-        - ncurses 
-        - openssl 
-        - readline 
-        - sqlite 
-        - tk 
-        - libpng 
-        - numpy 
-        - libjpeg-turbo 
-        - certifi 
-        - xz 
-        - jasper 
-        - jpeg
-    run:
-        - zlib 
-        - numpy >=1.9
-        - libjpeg-turbo
-        - libpng 
-        - python 
-        - jasper
-        - libtiff 
+  build:
+    - python
+    - pkg-config
+    # For sha256 comparisons of opencv_contrib
+    - openssl 1.0.*                # [unix]
+    # For downloading opencv_contrib
+    - curl >=7.44.0,<8
+    # For applying patches
+    - git                          # [win]
+    #- cmake  # use cmake provided by the system
+    - numpy 1.11.*
+    - hdf5 1.8.17         # [unix]
+    - jasper                       # [unix]
+    - zlib 1.2.11
+    - libjpeg-turbo
+    - tbb
+    - libtiff >=4.0.3,<4.0.8
+    - libwebp 0.5.*
+    - libpng >=1.6.22,<1.6.31
+    - openblas 0.2.19|0.2.19.*     # [not win]
+    - ffmpeg >=3.2.3,<3.2.6        # [not win]
+
+  run:
+    - python
+    - numpy >=1.11
+    - hdf5 1.8.17         # [unix]
+    - jasper                       # [unix]
+    - zlib 1.2.11
+    - jpeg 9*
+    - libwebp 0.5.*
+    - libtiff >=4.0.3,<4.0.8
+    - libpng >=1.6.22,<1.6.31
+    - openblas 0.2.19|0.2.19.*     # [not win]
+    - ffmpeg >=3.2.3,<3.2.6        # [not win]
+
 test:
     imports:
-        - cv2
+      - cv2
+      - cv2.xfeatures2d
+
+    commands:
+        # Verify dynamic libraries on all systems
+        {% set opencv_libs = [
+            "aruco",
+            "bgsegm",
+            "calib3d",
+            "ccalib",
+            "core",
+            "datasets",
+            "dnn",
+            "dpm",
+            "face",
+            "features2d",
+            "flann",
+            "fuzzy",
+            "highgui",
+            "imgcodecs",
+            "imgproc",
+            "line_descriptor",
+            "ml",
+            "objdetect",
+            "optflow",
+            "phase_unwrapping",
+            "photo",
+            "plot",
+            "reg",
+            "rgbd",
+            "saliency",
+            "shape",
+            "stereo",
+            "stitching",
+            "structured_light",
+            "superres",
+            "surface_matching",
+            "text",
+            "tracking",
+            "video",
+            "videoio",
+            "videostab",
+            "xfeatures2d",
+            "ximgproc",
+            "xobjdetect",
+            "xphoto"
+        ] %}
+        {% for each_opencv_lib in opencv_libs %}
+        - test -f $PREFIX/lib/libopencv_{{ each_opencv_lib }}${SHLIB_EXT}                  # [unix]
+        - if not exist %PREFIX%\\Library\\bin\\opencv_{{ each_opencv_lib }}330.dll exit 1  # [win]
+        {% endfor %}
+        - test -f $PREFIX/lib/libopencv_bioinspired${SHLIB_EXT}  # [unix]
+        - test -f $PREFIX/lib/libopencv_hdf${SHLIB_EXT}          # [unix]
+
 about:
-    home: http://opencv.org/
-    license: BSD 3-clause
-    summary: Computer vision and machine learning software library.
+  home: http://opencv.org/
+  license: BSD 3-clause
+  summary: Computer vision and machine learning software library.
+
 extra:
-    copy_test_source_files: true
-    final: true
+  recipe-maintainers:
+    - jakirkham
+    - msarahan
+    - patricksnape
+    - zym1010
+    - hajapy
+    - ocefpaf

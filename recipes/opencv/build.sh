@@ -1,10 +1,26 @@
 #!/usr/bin/env bash
 
 set +x
-SHLIB_EXT=.so
+SHORT_OS_STR=$(uname -s)
+
+QT="5"
+if [ "${SHORT_OS_STR:0:5}" == "Linux" ]; then
+    OPENMP="-DWITH_OPENMP=1"
+    # Looks like there's a bug in Opencv 3.2.0 for building with FFMPEG
+    # with GCC opencv/issues/8097
+    export CXXFLAGS="$CXXFLAGS -D__STDC_CONSTANT_MACROS"
+fi
+if [ "${SHORT_OS_STR}" == "Darwin" ]; then
+    OPENMP=""
+    QT="0"
+fi
 
 curl -L -O "https://github.com/opencv/opencv_contrib/archive/$PKG_VERSION.tar.gz"
+#test `openssl sha256 $PKG_VERSION.tar.gz | awk '{print $2}'` = "e94acf39cd4854c3ef905e06516e5f74f26dddfa6477af89558fb40a57aeb444"
 tar -zxf $PKG_VERSION.tar.gz
+
+mkdir -p build
+cd build
 
 if [ $PY3K -eq 1 ]; then
     PY_MAJOR=3
@@ -18,17 +34,6 @@ else
     INC_PYTHON="$PREFIX/include/python${PY_VER}"
 fi
 
-#
-#
-MACHINE_TYPE=`uname -m`
-if [ ${MACHINE_TYPE} == 'armv7l' ]; then
-    SET_SIMD="-DENABLE_NEON=ON -DENABLE_VFPV3=ON"
-else
-    SET_SIMD=""
-fi
-
-# PYTHON_SET_LIBJPEGTURBO_INCLUDE="-DJPEG_INCLUDE_DIR=${SP_DIR}/libjpeg-turbo/include"
-# PYTHON_SET_LIBJPEGTURBO="-DJPEG_LIBRARY=${LD_RUN_PATH}/libturbojpeg.a"
 
 PYTHON_SET_FLAG="-DBUILD_opencv_python${PY_MAJOR}=1"
 PYTHON_SET_EXE="-DPYTHON${PY_MAJOR}_EXECUTABLE=${PYTHON}"
@@ -46,43 +51,42 @@ PYTHON_UNSET_SP="-DPYTHON${PY_UNSET_MAJOR}_PACKAGES_PATH="
 
 # FFMPEG building requires pkgconfig
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PREFIX/lib/pkgconfig
-#
 
-mkdir -p build
-cd build
-
-cmake .. -LAH                                                             \
-    -DENABLE_NEON=1 \
-    -DENABLE_VFPV3=1 \
-    -DJPEG_INCLUDE_DIR="${SP_DIR}/libjpeg-turbo/include" \
-    -DJPEG_LIBRARY=${LD_RUN_PATH}/libturbojpeg.a \
-    -DWITH_JPEG=ON \
-    -DBUILD_JPEG=OFF \
-    -DBUILD_WITH_TBB=1 \
+cmake -LAH                                                                \
+#    -DENABLE_NEON=1                                                       \
+    -DENABLE_VFPV3=1                                                      \
+    -DJPEG_INCLUDE_DIR="${SP_DIR}/libjpeg-turbo/include"                  \
+    -DJPEG_LIBRARY=${LD_RUN_PATH}/libturbojpeg.a                          \
+    -DBUILD_WITH_TBB=1                                                    \
+    -DCMAKE_BUILD_TYPE="Release"                                          \
+    -DCMAKE_INSTALL_PREFIX=${PREFIX}                                      \
+    -DCMAKE_PREFIX_PATH=${PREFIX}                                         \
+    $OPENMP                                                               \
+    -DOpenBLAS=1                                                          \
+    -DOpenBLAS_INCLUDE_DIR=$PREFIX/include                                \
+    -DOpenBLAS_LIB=$PREFIX/lib/libopenblas$SHLIB_EXT                      \
+    -DWITH_EIGEN=0                                                        \
     -DBUILD_TESTS=0                                                       \
     -DBUILD_DOCS=0                                                        \
     -DBUILD_PERF_TESTS=0                                                  \
     -DBUILD_ZLIB=0                                                        \
-    -DOPENCV_EXTRA_MODULES_PATH="../opencv_contrib-$PKG_VERSION/modules"  \
-    -DTIFF_INCLUDE_DIR=$PREFIX/include                                    \
-    -DTIFF_LIBRARY=$PREFIX/lib/libtiff$SHLIB_EXT                          \
-    -DZLIB_LIBRARY_RELEASE=$PREFIX/lib/libz$SHLIB_EXT                     \
-    -DZLIB_INCLUDE_DIR=$PREFIX/include                                    \
+    -DHDF5_ROOT=${PREFIX}                                                 \
     -DBUILD_TIFF=0                                                        \
     -DBUILD_PNG=0                                                         \
+    -DBUILD_OPENEXR=1                                                     \
     -DBUILD_JASPER=0                                                      \
     -DBUILD_JPEG=0                                                        \
     -DWITH_CUDA=0                                                         \
     -DWITH_OPENCL=0                                                       \
     -DWITH_OPENNI=0                                                       \
+    -DWITH_FFMPEG=1                                                       \
     -DWITH_MATLAB=0                                                       \
     -DWITH_VTK=0                                                          \
+    -DWITH_QT=0                                                           \
     -DWITH_GPHOTO2=0                                                      \
-    -DWITH_LAPACK=0                                                       \
     -DINSTALL_C_EXAMPLES=0                                                \
-    -DCMAKE_BUILD_TYPE="Release"                                          \
+    -DOPENCV_EXTRA_MODULES_PATH="../opencv_contrib-$PKG_VERSION/modules"  \
     -DCMAKE_SKIP_RPATH:bool=ON                                            \
-    -DCMAKE_INSTALL_PREFIX=$PREFIX                                        \
     -DPYTHON_PACKAGES_PATH=${SP_DIR}                                      \
     -DPYTHON_EXECUTABLE=${PYTHON}                                         \
     -DPYTHON_INCLUDE_DIR=${INC_PYTHON}                                    \
@@ -98,8 +102,7 @@ cmake .. -LAH                                                             \
     $PYTHON_UNSET_INC                                                     \
     $PYTHON_UNSET_NUMPY                                                   \
     $PYTHON_UNSET_LIB                                                     \
-    $PYTHON_UNSET_SP
+    $PYTHON_UNSET_SP                                                      \
+    ..
 
-
-make -j${CPU_COUNT}
-make install
+make install -j${CPU_COUNT}
