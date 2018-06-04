@@ -22,8 +22,8 @@ requirements:
     # For applying patches
     - git                          # [win]
     #- cmake  # use cmake provided by the system
-    - numpy 1.11.*
-    - hdf5 1.8.17         # [unix]
+    - numpy 
+    - hdf5          # [unix]
     - jasper                       # [unix]
     - zlib 1.2.11
     - libjpeg-turbo
@@ -37,7 +37,7 @@ requirements:
   run:
     - python
     - numpy >=1.11
-    - hdf5 1.8.17         # [unix]
+    - hdf5         # [unix]
     - jasper                       # [unix]
     - zlib 1.2.11
     - jpeg 9*

@@ -52,8 +52,10 @@ PYTHON_UNSET_SP="-DPYTHON${PY_UNSET_MAJOR}_PACKAGES_PATH="
 # FFMPEG building requires pkgconfig
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PREFIX/lib/pkgconfig
 
-cmake -LAH                                                                \
 #    -DENABLE_NEON=1                                                       \
+
+
+cmake -LAH                                                                \
     -DENABLE_VFPV3=1                                                      \
     -DJPEG_INCLUDE_DIR="${SP_DIR}/libjpeg-turbo/include"                  \
     -DJPEG_LIBRARY=${LD_RUN_PATH}/libturbojpeg.a                          \
