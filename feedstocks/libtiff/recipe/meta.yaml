@@ -19,7 +19,7 @@ requirements:
   build:
     - python  # [win]
     - cmake  # [win]
-    - toolchain
+    - toolchain3-rpi3
     - zlib 1.2.11
     - jpeg 9*
     - xz 5.2.*  # [not win]

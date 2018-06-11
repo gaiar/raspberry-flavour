@@ -1,0 +1,47 @@
+{% set name = "text-unidecode" %}
+{% set version = "1.2" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "5a1375bb2ba7968740508ae38d92e1f889a0832913cb1c447d5e2046061a396d" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - text_unidecode
+
+about:
+  home: https://github.com/kmike/text-unidecode/
+  license: Artistic License
+  license_family: OTHER
+  license_file: ''
+  summary: The most basic Text::Unidecode port
+  description: "Text-Unidecode\n==============\n\n.. image:: https://travis-ci.org/kmike/text-unidecode.svg?branch=master\n    :target: https://travis-ci.org/kmike/text-unidecode\n    :alt: Build Status\n\
+    \ntext-unidecode is the most basic port of the\n`Text::Unidecode <http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm>`_\nPerl library.\n\nThere are other Python ports of Text::Unidecode\
+    \ (unidecode_\nand isounidecode_). unidecode_ is GPL; isounidecode_ uses too much memory,\nand it didn't support Python 3 when this package was created.\n\nThis port is licensed under `Artistic License`_\
+    \ and supports Python 2.7 and\n3.3+. If you're OK with GPL, use unidecode_ (it has better memory usage and\nbetter transliteration quality).\n\n.. _unidecode: https://pypi.python.org/pypi/Unidecode/\n\
+    .. _isounidecode: https://pypi.python.org/pypi/isounidecode/\n.. _Artistic License: https://opensource.org/licenses/Artistic-Perl-1.0\n\nInstallation\n------------\n\n::\n\n    pip install text-unidecode\n\
+    \nUsage\n-----\n\n::\n\n    >>> from text_unidecode import unidecode\n    >>> unidecode(u'\u043A\u0430\u043A\u043E\u0439-\u0442\u043E \u0442\u0435\u043A\u0441\u0442')\n    u'kakoi-to tekst'\n"
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''
