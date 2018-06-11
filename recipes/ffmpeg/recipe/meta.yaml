@@ -17,12 +17,15 @@ build:
 
 requirements:
   build:
+    - toolchain3-rpi3
     - pkg-config  # [not win]
     - libtool  # [not win]
     - nasm  # [not win]
     - 7za  # [win]
     - curl >=7  # [win]
     - openssl  # [win]
+    - x264
+    - libass
   host:
     - bzip2  # [not win]
     - freetype  # [not win]

@@ -7,7 +7,12 @@ CFLAGS="-march=native -mtune=native"
 export CFLAGS
 export CXXFLAGS="${CFLAGS}"
 
+chmod +x autogen.sh
+
+./autogen.sh  
+
 chmod +x configure
+
 ./configure \
         --enable-pic \
         --enable-shared \

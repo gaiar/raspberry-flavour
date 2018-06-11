@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: https://github.com/libass/libass.git
-  git_rev: 98727c3b78f44cb3bbc955fcf5d977ebd911d5ca
+  git_rev: {{ version }}
 
 build:
   number: 0
@@ -15,6 +15,7 @@ build:
 requirements:
   build:
     - toolchain3-rpi3
+    - pkg-config
     - perl
     - nasm
 

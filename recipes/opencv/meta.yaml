@@ -32,7 +32,7 @@ requirements:
     - libwebp 0.5.*
     - libpng >=1.6.22,<1.6.31
     - openblas 0.2.19|0.2.19.*     # [not win]
-    - ffmpeg >=3.2.3,<3.2.6        # [not win]
+    - ffmpeg >=3.2.3               # [not win]
 
   run:
     - python
@@ -40,12 +40,12 @@ requirements:
     - hdf5         # [unix]
     - jasper                       # [unix]
     - zlib 1.2.11
-    - jpeg 9*
+    - libjpeg-turbo
     - libwebp 0.5.*
     - libtiff >=4.0.3,<4.0.8
     - libpng >=1.6.22,<1.6.31
     - openblas 0.2.19|0.2.19.*     # [not win]
-    - ffmpeg >=3.2.3,<3.2.6        # [not win]
+    - ffmpeg                       # [not win]
 
 test:
     imports:
