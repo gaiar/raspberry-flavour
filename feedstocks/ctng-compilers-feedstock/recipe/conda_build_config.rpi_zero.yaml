@@ -7,7 +7,7 @@ ctng_cpu_arch:
 ctng_libc:
   - gnu
 gnu:
-  - 2.25
+  - 2.24
 ctng_kernel:
   - 3.10
 ctng_binutils:
