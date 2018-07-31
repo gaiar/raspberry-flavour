@@ -3,7 +3,7 @@ ctng_nature:
 ctng_sample:
   - aarch64-unknown-linux-gnu
 ctng_cpu_arch:
-  - armv7l
+  - aarch64
 ctng_libc:
   - gnu
 gnu:

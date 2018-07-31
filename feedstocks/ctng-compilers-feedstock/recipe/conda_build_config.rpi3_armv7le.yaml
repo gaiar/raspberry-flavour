@@ -1,7 +1,7 @@
 ctng_nature:
   - shared
 ctng_sample:
-  - armv8-rpi3-linux-gnueabihf
+  - armv7-rpi2-linux-gnueabihf
 ctng_cpu_arch:
   - armv7l
 ctng_libc:
