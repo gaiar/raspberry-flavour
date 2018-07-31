@@ -1,9 +1,9 @@
 ctng_nature:
   - shared
 ctng_sample:
-  - arm-unknown-linux-gnueabi
+  - armv8-rpi3-linux-gnueabihf
 ctng_cpu_arch:
-  - armv6l
+  - armv7l
 ctng_libc:
   - gnu
 gnu:
@@ -35,7 +35,7 @@ ctng_duma:
 ctng_vendor:
   - rpi3
 ctng_target_platform:
-  - linux-armv6l
+  - linux-armv7l
 zip_keys:
   -
     - ctng_target_platform
