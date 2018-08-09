@@ -1,0 +1,13 @@
+python:
+    - 2.7
+    - 3.5
+    - 3.6
+    - 3.7
+
+jpeg:
+    - jpeg
+    - libjpeg-turbo
+
+target_platform:
+    - armv7l
+    - armv6l
